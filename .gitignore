@@ -44,3 +44,4 @@ next-env.d.ts
 /1/
 /ocr.txt
 /.tessdata/
+/_preview*/

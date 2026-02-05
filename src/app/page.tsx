@@ -9,25 +9,25 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "日本語で迷わないガイド",
   description:
-    "ババオプションの使い方と体験メモを日本語で整理したガイドサイト。公式条件の確認から始められます。",
+    "ババオプションを使ってみた感想と使い方を日本語でまとめたガイドサイト。公式条件の確認から始められます。",
 };
 
 const featureCards = [
   {
     title: "$1から試せる設計",
-    description: "小さく始められるのは安心でした（公式記載ベース）。",
+    description: "小さく始められるのは助かる（公式記載ベース）。",
   },
   {
     title: "デモ$10,000",
-    description: "まずはデモで操作感を確かめられました。",
+    description: "まずはデモで操作の癖をつかめました。",
   },
   {
     title: "最大888%ペイアウト設計",
-    description: "商品・条件により変動。高めに設定されることがある点は魅力。",
+    description: "商品・条件により変動。高めに見える時期もあります。",
   },
   {
     title: "70+の取引資産",
-    description: "選択肢が多く、気になる銘柄を探しやすい印象です。",
+    description: "選択肢が多く、気になる銘柄を探しやすい印象。",
   },
   {
     title: "最短5秒から満期設定",
@@ -35,9 +35,14 @@ const featureCards = [
   },
   {
     title: "画面が直感的",
-    description: "ボタン配置が分かりやすく、迷いにくい印象でした。",
+    description: "ボタン配置が分かりやすく、迷いにくい印象。",
   },
 ];
+
+const bonusHighlight = {
+  title: "明日（2026年2月6日）から初回入金50%ボーナスの案内",
+  note: "開始日・条件は変更される場合があります。必ず公式でご確認ください。",
+};
 
 const steps = [
   {
@@ -60,7 +65,7 @@ const steps = [
 const impressions = [
   {
     title: "使いやすい",
-    description: "画面が見やすく、操作が直感的で迷いにくい印象でした。",
+    description: "画面が見やすく、操作が直感的で迷いにくいと感じました。",
   },
   {
     title: "テンポが良い",
@@ -68,7 +73,7 @@ const impressions = [
   },
   {
     title: "利益の可能性",
-    description: "相場が合えば利益が出る可能性もありますが、保証はありません。",
+    description: "相場が合えば利益が出る可能性はありますが、保証はありません。",
   },
 ];
 
@@ -113,15 +118,15 @@ export default function Home() {
       <section className="section pt-10">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6">
-            <span className="tag">ババオプション体験メモ</span>
+            <span className="tag">ババオプション 使ってみたメモ</span>
             <h1 className="font-display text-4xl font-semibold leading-tight text-black sm:text-5xl">
-              触ってみると意外と迷わない、
+              意外とシンプルで、
               <br />
-              ババオプションの使い心地
+              ババオプションは触りやすい
             </h1>
             <p className="text-base text-black/70 sm:text-lg">
-              バイナリーオプション取引の使い方や感じたポイントを、日本語で整理しました。条件や仕様は変わることがあるため、
-              最新は公式で必ずご確認ください。
+              触ってみた感想ベースで、使い方やポイントを整理しました。相場が合えば利益が出る可能性はありますが、
+              損失の可能性もあります。条件や仕様は変わることがあるため、最新は公式で必ずご確認ください。
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <a
@@ -135,6 +140,10 @@ export default function Home() {
               <Link className="btn-secondary" href="/start">
                 はじめ方を見る
               </Link>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/80 px-4 py-3 text-sm text-amber-900">
+              <p className="font-semibold">{bonusHighlight.title}</p>
+              <p className="mt-1 text-xs text-amber-900/80">{bonusHighlight.note}</p>
             </div>
             <p className="risk-text">
               ※当サイトはプロモーションを含む体験メモです。利益が出る可能性はありますが、損失の可能性もあります。

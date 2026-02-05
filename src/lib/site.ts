@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: "バイナリーオプションガイドJP",
-  tagline: "ババオプションを使ってみた感想と使い方メモ",
+  name: "ババオプション体験ガイドJP",
+  tagline: "使ってみた感想と始め方",
   description:
-    "ババオプションの使い心地・始め方・注意点を日本語で整理したガイドサイトです。最新条件は公式で確認してください。",
+    "ババオプションの使い心地・始め方・注意点を日本語でまとめたガイドです。最新条件は公式で確認してください。",
   contactEmail: "support@example.com",
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
   officialUrl: "https://www.babaoption.com/",

@@ -6,7 +6,7 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "ボーナス解説",
   description:
-    "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。",
+    "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。明日(2026年2月6日)から初回入金50%ボーナス。",
 };
 
 export default function BonusPage() {
@@ -18,10 +18,11 @@ export default function BonusPage() {
         <div className="space-y-4">
           <p className="text-sm font-semibold text-teal-700">キャンペーン解説</p>
           <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
-            ボーナスがあるときのポイント
+            明日（2026年2月6日）から初回入金50%ボーナス
           </h1>
           <p className="text-sm text-black/70">
-            ババオプションのボーナスは時期によって内容が変わります。使ってみて感じたポイントと注意点をまとめました。
+            ババオプションのボーナスは時期によって内容が変わります。ここでは明日開始予定の初回入金ボーナスに触れつつ、
+            使ってみて感じたポイントと注意点をまとめました。
           </p>
           <a
             className="btn-primary"
@@ -42,7 +43,7 @@ export default function BonusPage() {
       </section>
 
       <section className="section">
-          <h2 className="section-title">注意しておきたい点</h2>
+        <h2 className="section-title">注意しておきたい点</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <div className="card">
             <h3 className="font-display text-lg text-black">ボーナス自体は出金不可</h3>
@@ -64,7 +65,7 @@ export default function BonusPage() {
           </div>
         </div>
         <p className="mt-4 text-xs text-black/60">
-          ※キャンペーンの有無や適用条件は変更される場合があります。必ず公式でご確認ください。
+          ※キャンペーンの有無や適用条件は変更される場合があります。明日開始予定の内容も公式で必ずご確認ください。
         </p>
       </section>
 

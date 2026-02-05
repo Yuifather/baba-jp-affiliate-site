@@ -41,7 +41,7 @@ export default function RootLayout({
               <div className="flex flex-wrap items-center gap-4">
                 <BrandMark />
                 <div className="space-y-1">
-                  <span className="tag">体験メモ</span>
+                  <span className="tag">使ってみたメモ</span>
                   <Link className="block font-display text-xl text-black" href="/">
                     {siteConfig.name}
                   </Link>
