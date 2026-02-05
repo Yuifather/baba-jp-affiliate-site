@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "ババオプション使い方ガイド",
   tagline: "バイナリーオプションの始め方メモ",
   description:
-    "バイナリーオプションの使い方・始め方・注意点を、ババオプション中心に日本語でまとめたガイドです。最新条件は公式で確認してください。",
+    "バイナリーオプションの使い方・始め方・口座開設・デモ・入金/出金・リスクを、ババオプション中心に日本語で整理したガイドです。最新条件は公式で確認してください。",
   contactEmail: "jaku4305@gmail.com",
   baseUrl:
     process.env.NEXT_PUBLIC_SITE_URL ??

@@ -2,21 +2,25 @@ import type { Metadata } from "next";
 import AffiliateCta from "@/components/AffiliateCta";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
+import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "リスクと注意点",
-  description: "バイナリーオプション取引に関する主なリスクと注意点をまとめています。",
+  description:
+    "バイナリーオプション取引のリスク、損失可能性、自己責任の注意点を日本語で整理。",
   alternates: {
     canonical: "/risk",
   },
   openGraph: {
     title: "リスクと注意点",
-    description: "バイナリーオプション取引に関する主なリスクと注意点をまとめています。",
+    description:
+      "バイナリーオプション取引のリスク、損失可能性、自己責任の注意点を日本語で整理。",
     url: "/risk",
   },
   twitter: {
     title: "リスクと注意点",
-    description: "バイナリーオプション取引に関する主なリスクと注意点をまとめています。",
+    description:
+      "バイナリーオプション取引のリスク、損失可能性、自己責任の注意点を日本語で整理。",
   },
 };
 
@@ -66,7 +70,7 @@ export default function RiskPage() {
         ]}
       />
 
-      <PageMeta lastUpdated="2026年2月5日" />
+      <PageMeta lastUpdated={getLastUpdatedLabel("/risk")} />
     </div>
   );
 }

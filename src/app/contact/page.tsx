@@ -2,21 +2,25 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
+import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "お問い合わせ",
-  description: "当サイトへのお問い合わせ方法を記載しています。",
+  description:
+    "ババオプション使い方ガイドへのお問い合わせ方法。メールでの連絡先と注意点を掲載。",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: "お問い合わせ",
-    description: "当サイトへのお問い合わせ方法を記載しています。",
+    description:
+      "ババオプション使い方ガイドへのお問い合わせ方法。メールでの連絡先と注意点を掲載。",
     url: "/contact",
   },
   twitter: {
     title: "お問い合わせ",
-    description: "当サイトへのお問い合わせ方法を記載しています。",
+    description:
+      "ババオプション使い方ガイドへのお問い合わせ方法。メールでの連絡先と注意点を掲載。",
   },
 };
 
@@ -55,7 +59,7 @@ export default function ContactPage() {
         ]}
       />
 
-      <PageMeta lastUpdated="2026年2月5日" />
+      <PageMeta lastUpdated={getLastUpdatedLabel("/contact")} />
     </div>
   );
 }

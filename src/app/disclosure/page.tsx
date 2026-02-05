@@ -3,21 +3,25 @@ import AffiliateCta from "@/components/AffiliateCta";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
 import { siteConfig } from "@/lib/site";
+import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "ご案内",
-  description: "当サイトの運営方針と情報提供の範囲について説明します。",
+  description:
+    "運営者情報、編集方針、更新方針、免責などをまとめたご案内ページです。",
   alternates: {
     canonical: "/disclosure",
   },
   openGraph: {
     title: "ご案内",
-    description: "当サイトの運営方針と情報提供の範囲について説明します。",
+    description:
+      "運営者情報、編集方針、更新方針、免責などをまとめたご案内ページです。",
     url: "/disclosure",
   },
   twitter: {
     title: "ご案内",
-    description: "当サイトの運営方針と情報提供の範囲について説明します。",
+    description:
+      "運営者情報、編集方針、更新方針、免責などをまとめたご案内ページです。",
   },
 };
 
@@ -30,7 +34,7 @@ export default function DisclosurePage() {
           ご案内
         </h1>
         <p className="text-sm text-black/70">
-          当サイトはバイナリーオプションの使い方や注意点を整理した情報提供サイトです。
+          当サイトはババオプションを中心に、バイナリーオプションの使い方や注意点を整理した情報提供サイトです。
         </p>
       </section>
 
@@ -83,7 +87,7 @@ export default function DisclosurePage() {
         ]}
       />
 
-      <PageMeta lastUpdated="2026年2月5日" />
+      <PageMeta lastUpdated={getLastUpdatedLabel("/disclosure")} />
     </div>
   );
 }

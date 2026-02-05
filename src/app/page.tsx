@@ -7,51 +7,52 @@ import MediaSlot from "@/components/MediaSlot";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
 import { getOfficialUrl } from "@/lib/site";
+import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "ババオプションの使い方ガイド",
   description:
-    "ババオプション（バイナリーオプション）の使い方と始め方を日本語でまとめたガイドサイト。公式条件の確認から始められます。",
+    "ババオプション（バイナリーオプション）の使い方・始め方・口座開設・デモ・入金/出金・リスクを日本語で整理。公式条件の確認から始められます。",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "ババオプションの使い方ガイド",
     description:
-      "ババオプション（バイナリーオプション）の使い方と始め方を日本語でまとめたガイドサイト。公式条件の確認から始められます。",
+      "ババオプション（バイナリーオプション）の使い方・始め方・口座開設・デモ・入金/出金・リスクを日本語で整理。公式条件の確認から始められます。",
     url: "/",
   },
   twitter: {
     title: "ババオプションの使い方ガイド",
     description:
-      "ババオプション（バイナリーオプション）の使い方と始め方を日本語でまとめたガイドサイト。公式条件の確認から始められます。",
+      "ババオプション（バイナリーオプション）の使い方・始め方・口座開設・デモ・入金/出金・リスクを日本語で整理。公式条件の確認から始められます。",
   },
 };
 
 const featureCards = [
   {
     title: "$1から試せる設計",
-    description: "小さく始められるのは助かる（公式記載ベース）。",
+    description: "少額で始めたい人向けの取引設計（公式記載ベース）。",
   },
   {
     title: "デモ$10,000",
-    description: "まずはデモで操作の癖をつかめました。",
+    description: "デモ口座で取引画面の操作を確認できます。",
   },
   {
     title: "最大888%ペイアウト設計",
-    description: "商品・条件により変動。高めに見える時期もあります。",
+    description: "商品・条件により変動。最新条件は公式で要確認。",
   },
   {
     title: "70+の取引資産",
-    description: "選択肢が多く、気になる銘柄を探しやすい印象。",
+    description: "通貨ペア/株価指数/コモディティなどを選べます。",
   },
   {
     title: "最短5秒から満期設定",
-    description: "テンポよく試せて楽しい一方、判断は慎重にしたいところ。",
+    description: "短期取引の選択肢あり。判断は慎重に。",
   },
   {
     title: "画面が直感的",
-    description: "ボタン配置が分かりやすく、迷いにくい印象。",
+    description: "取引画面が見やすく、操作に迷いにくい構成。",
   },
 ];
 
@@ -170,13 +171,14 @@ export default function Home() {
           <div className="space-y-6">
             <span className="tag">バイナリーオプション 使い方メモ</span>
             <h1 className="font-display text-4xl font-semibold leading-tight text-black sm:text-5xl">
-              意外とシンプルで、
+              ババオプションの使い方・始め方
               <br />
-              ババオプションは触りやすい
+              口座開設から取引までを整理
             </h1>
             <p className="text-base text-black/70 sm:text-lg">
-              触ってみた感想ベースで、使い方やポイントを整理しました。相場が合えば利益が出る可能性はありますが、
-              損失の可能性もあります。条件や仕様は変わることがあるため、最新は公式で必ずご確認ください。
+              バイナリーオプションの始め方として、口座開設・デモ口座・入金/出金・取引の流れをまとめています。
+              相場が合えば利益が出る可能性はありますが、損失の可能性もあります。条件や仕様は変わることがあるため、
+              最新は公式で必ずご確認ください。
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <a
@@ -391,7 +393,7 @@ export default function Home() {
         ]}
       />
 
-      <PageMeta lastUpdated="2026年2月5日" />
+      <PageMeta lastUpdated={getLastUpdatedLabel("/")} />
     </div>
   );
 }

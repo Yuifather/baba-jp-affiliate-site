@@ -5,24 +5,25 @@ import MediaSlot from "@/components/MediaSlot";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
 import { getOfficialUrl } from "@/lib/site";
+import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "初回入金50%ボーナス",
   description:
-    "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。2026年2月6日から初回入金50%ボーナス。",
+    "ババオプションの入金ボーナス（初回50%）の概要、対象条件、出金ルールの注意点を日本語で整理。2026年2月6日開始。",
   alternates: {
     canonical: "/bonus",
   },
   openGraph: {
     title: "初回入金50%ボーナス",
     description:
-      "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。2026年2月6日から初回入金50%ボーナス。",
+      "ババオプションの入金ボーナス（初回50%）の概要、対象条件、出金ルールの注意点を日本語で整理。2026年2月6日開始。",
     url: "/bonus",
   },
   twitter: {
     title: "初回入金50%ボーナス",
     description:
-      "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。2026年2月6日から初回入金50%ボーナス。",
+      "ババオプションの入金ボーナス（初回50%）の概要、対象条件、出金ルールの注意点を日本語で整理。2026年2月6日開始。",
   },
 };
 
@@ -40,8 +41,8 @@ export default function BonusPage() {
             2026年2月6日から初回入金50%ボーナス
           </h1>
           <p className="text-sm text-black/70">
-            現在案内されている主なキャンペーンは初回入金50%ボーナスです。ここでは2026年2月6日開始予定の内容に触れつつ、
-            使ってみて感じたポイントと注意点をまとめました。
+            現在案内されている主なキャンペーンは初回入金50%の入金ボーナスです。ここでは2026年2月6日開始予定の内容に触れつつ、
+            条件や注意点をわかりやすく整理しました。
           </p>
           <a
             className="btn-primary"
@@ -181,7 +182,7 @@ export default function BonusPage() {
         ]}
       />
 
-      <PageMeta lastUpdated="2026年2月5日" />
+      <PageMeta lastUpdated={getLastUpdatedLabel("/bonus")} />
     </div>
   );
 }

@@ -6,31 +6,32 @@ import MediaSlot from "@/components/MediaSlot";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
 import { getOfficialUrl } from "@/lib/site";
+import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "はじめ方",
   description:
-    "バイナリーオプションの始め方として、ババオプションの登録から取引開始までを日本語で段階的に整理したガイドです。",
+    "バイナリーオプションの始め方として、ババオプションの口座開設・メール認証・KYC・入金/デモ・取引開始までを日本語で整理。",
   alternates: {
     canonical: "/start",
   },
   openGraph: {
     title: "はじめ方",
     description:
-      "バイナリーオプションの始め方として、ババオプションの登録から取引開始までを日本語で段階的に整理したガイドです。",
+      "バイナリーオプションの始め方として、ババオプションの口座開設・メール認証・KYC・入金/デモ・取引開始までを日本語で整理。",
     url: "/start",
   },
   twitter: {
     title: "はじめ方",
     description:
-      "バイナリーオプションの始め方として、ババオプションの登録から取引開始までを日本語で段階的に整理したガイドです。",
+      "バイナリーオプションの始め方として、ババオプションの口座開設・メール認証・KYC・入金/デモ・取引開始までを日本語で整理。",
   },
 };
 
 const steps = [
   {
-    title: "ババオプションで登録",
-    description: "メールアドレスとパスワードを設定し、アカウントを作成します。",
+    title: "口座開設（アカウント作成）",
+    description: "メールアドレスとパスワードを設定し、口座開設を進めます。",
     icon: "/images/step-1.svg",
   },
   {
@@ -44,8 +45,8 @@ const steps = [
     icon: "/images/step-3.svg",
   },
   {
-    title: "デモまたは入金",
-    description: "まずはデモで操作を確認し、必要に応じて入金します。",
+    title: "デモ口座 / 入金",
+    description: "まずはデモ口座で操作を確認し、必要に応じて入金します。",
     icon: "/images/step-4.svg",
   },
   {
@@ -113,7 +114,8 @@ export default function StartPage() {
             登録から初回取引までの流れ
           </h1>
           <p className="text-sm text-black/70">
-            実際に触ってみた流れをベースにまとめています。画面や条件は時期によって変わるため、公式でご確認ください。
+            口座開設・メール認証・KYC・デモ/入金の流れを、バイナリーオプション初心者向けに整理しました。
+            画面や条件は時期によって変わるため、公式でご確認ください。
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -156,7 +158,7 @@ export default function StartPage() {
           ))}
         </div>
         <p className="mt-4 text-xs text-black/60">
-          ※条件・必要書類は地域やアカウント状況によって異なる場合があります。
+          ※口座開設に必要な条件・書類は地域やアカウント状況によって異なる場合があります。
         </p>
       </section>
 
@@ -215,7 +217,7 @@ export default function StartPage() {
         ]}
       />
 
-      <PageMeta lastUpdated="2026年2月5日" />
+      <PageMeta lastUpdated={getLastUpdatedLabel("/start")} />
     </div>
   );
 }

@@ -6,8 +6,8 @@ export const contentType = ogContentType;
 
 export default function OpenGraphImage() {
   return renderOgImage({
-    title: "ババオプション使い方ガイド",
-    subtitle: "口座開設・デモ・入金/出金・リスクを整理",
-    eyebrow: "バイナリーオプション",
+    title: "お問い合わせ",
+    subtitle: "メールでの連絡先と注意点",
+    eyebrow: "ババオプション使い方ガイド",
   });
 }

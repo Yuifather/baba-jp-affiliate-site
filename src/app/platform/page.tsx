@@ -5,24 +5,25 @@ import MediaSlot from "@/components/MediaSlot";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
 import { getOfficialUrl } from "@/lib/site";
+import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "プラットフォーム",
   description:
-    "バイナリーオプションの取引環境として、ババオプションのWeb・アプリ・デスクトップの利用イメージを紹介するページです。",
+    "ババオプションのWeb/アプリ/デスクトップ対応など、バイナリーオプションの取引環境と操作性を日本語で整理。",
   alternates: {
     canonical: "/platform",
   },
   openGraph: {
     title: "プラットフォーム",
     description:
-      "バイナリーオプションの取引環境として、ババオプションのWeb・アプリ・デスクトップの利用イメージを紹介するページです。",
+      "ババオプションのWeb/アプリ/デスクトップ対応など、バイナリーオプションの取引環境と操作性を日本語で整理。",
     url: "/platform",
   },
   twitter: {
     title: "プラットフォーム",
     description:
-      "バイナリーオプションの取引環境として、ババオプションのWeb・アプリ・デスクトップの利用イメージを紹介するページです。",
+      "ババオプションのWeb/アプリ/デスクトップ対応など、バイナリーオプションの取引環境と操作性を日本語で整理。",
   },
 };
 
@@ -58,7 +59,7 @@ export default function PlatformPage() {
             どのデバイスでも迷わない
           </h1>
           <p className="text-sm text-black/70">
-            Web・アプリ・デスクトップの体験イメージをまとめました。対応状況は公式でご確認ください。
+            Web取引・スマホアプリ・デスクトップ版の取引画面をまとめました。対応状況は公式でご確認ください。
           </p>
           <a
             className="btn-primary"
@@ -132,7 +133,7 @@ export default function PlatformPage() {
         ]}
       />
 
-      <PageMeta lastUpdated="2026年2月5日" />
+      <PageMeta lastUpdated={getLastUpdatedLabel("/platform")} />
     </div>
   );
 }

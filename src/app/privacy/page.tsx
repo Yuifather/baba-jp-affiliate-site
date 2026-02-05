@@ -2,21 +2,25 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
+import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー",
-  description: "当サイトの個人情報の取扱いについて説明します。",
+  description:
+    "ババオプション使い方ガイドのプライバシーポリシー。収集情報、Cookie、保管期間、第三者提供について説明します。",
   alternates: {
     canonical: "/privacy",
   },
   openGraph: {
     title: "プライバシーポリシー",
-    description: "当サイトの個人情報の取扱いについて説明します。",
+    description:
+      "ババオプション使い方ガイドのプライバシーポリシー。収集情報、Cookie、保管期間、第三者提供について説明します。",
     url: "/privacy",
   },
   twitter: {
     title: "プライバシーポリシー",
-    description: "当サイトの個人情報の取扱いについて説明します。",
+    description:
+      "ババオプション使い方ガイドのプライバシーポリシー。収集情報、Cookie、保管期間、第三者提供について説明します。",
   },
 };
 
@@ -83,7 +87,7 @@ export default function PrivacyPage() {
         ]}
       />
 
-      <PageMeta lastUpdated="2026年2月5日" />
+      <PageMeta lastUpdated={getLastUpdatedLabel("/privacy")} />
     </div>
   );
 }

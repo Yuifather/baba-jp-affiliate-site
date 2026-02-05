@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
+import { getLastModifiedForRoute } from "@/lib/seo";
+
+export const runtime = "nodejs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.baseUrl.replace(/\/$/, "");
@@ -17,6 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((route) => ({
     url: `${baseUrl}${route || "/"}`,
-    lastModified: new Date(),
+    lastModified: getLastModifiedForRoute(route || "/"),
   }));
 }

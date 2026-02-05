@@ -3,24 +3,25 @@ import FaqAccordion from "@/components/FaqAccordion";
 import AffiliateCta from "@/components/AffiliateCta";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
+import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "バイナリーオプション/ババオプションに関するよくある質問を日本語で整理したFAQです。",
+    "ババオプションの使い方、デモ口座、最低取引額、入金ボーナス、リスクに関するFAQを日本語で整理。",
   alternates: {
     canonical: "/faq",
   },
   openGraph: {
     title: "FAQ",
     description:
-      "バイナリーオプション/ババオプションに関するよくある質問を日本語で整理したFAQです。",
+      "ババオプションの使い方、デモ口座、最低取引額、入金ボーナス、リスクに関するFAQを日本語で整理。",
     url: "/faq",
   },
   twitter: {
     title: "FAQ",
     description:
-      "バイナリーオプション/ババオプションに関するよくある質問を日本語で整理したFAQです。",
+      "ババオプションの使い方、デモ口座、最低取引額、入金ボーナス、リスクに関するFAQを日本語で整理。",
   },
 };
 
@@ -36,6 +37,11 @@ const faqItems = [
       "公式記載では$10,000のデモが用意されています。内容は変更される可能性があります。",
   },
   {
+    question: "口座開設に必要なものは？",
+    answer:
+      "本人確認（KYC）が必要になる場合があります。必要書類や条件は公式でご確認ください。",
+  },
+  {
     question: "最低取引額や最低入金額は？",
     answer:
       "公式記載では$1から取引できる設計とされています。最新条件は公式でご確認ください。",
@@ -44,6 +50,11 @@ const faqItems = [
     question: "入金ボーナスの出金ルールは？",
     answer:
       "ボーナス自体は出金不可とされる場合があります。利益の出金や条件は公式で確認してください。",
+  },
+  {
+    question: "出金方法は？",
+    answer:
+      "出金方法や手数料、反映時間は公式の案内でご確認ください。条件は変更される場合があります。",
   },
   {
     question: "スマホだけで利用できますか？",
@@ -102,7 +113,7 @@ export default function FaqPage() {
         ]}
       />
 
-      <PageMeta lastUpdated="2026年2月5日" />
+      <PageMeta lastUpdated={getLastUpdatedLabel("/faq")} />
     </div>
   );
 }
