@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "バイナリーオプションの始め方メモ",
   description:
     "バイナリーオプションの使い方・始め方・注意点を、ババオプション中心に日本語でまとめたガイドです。最新条件は公式で確認してください。",
-  contactEmail: "support@example.com",
+  contactEmail: "jaku4305@gmail.com",
   baseUrl:
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://example.com"),
