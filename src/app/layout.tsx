@@ -66,9 +66,6 @@ export default function RootLayout({
                   <p>
                     ※当サイトはプロモーション（広告）を含みます。当サイトはババオプションのパートナーです。
                   </p>
-                  <p>
-                    紹介リンク経由で登録・取引が行われた場合、当サイトは報酬を得ることがあります。
-                  </p>
                 </div>
                 <div className="space-y-2 text-black/70">
                   <p className="font-semibold text-black">リスク警告 / 免責</p>

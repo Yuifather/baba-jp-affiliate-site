@@ -24,11 +24,7 @@ export default function DisclosurePage() {
         <div className="card space-y-4">
           <h2 className="font-display text-xl text-black">パートナー関係について</h2>
           <p className="text-sm text-black/70">
-            当サイトにはパートナーリンクが含まれます。紹介リンク経由で登録や取引が発生した場合、当サイトが報酬を
-            得ることがあります。
-          </p>
-          <p className="text-sm text-black/70">
-            ただし、報酬の発生や金額を保証するものではありません。判断は必ずご自身で行ってください。
+            当サイトにはパートナーリンクが含まれます。詳細や条件は公式サイトでご確認ください。
           </p>
         </div>
       </section>
