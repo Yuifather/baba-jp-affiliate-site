@@ -6,7 +6,7 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "プラットフォーム",
   description:
-    "Web・アプリ・デスクトップでの利用イメージを紹介するガイドページです。",
+    "ババオプションのWeb・アプリ・デスクトップの利用イメージを紹介するページです。",
 };
 
 const platforms = [
@@ -36,7 +36,7 @@ export default function PlatformPage() {
             どのデバイスでも迷わない
           </h1>
           <p className="text-sm text-black/70">
-            公式で案内されているプラットフォームを、目的別に紹介します。実際の画面や対応状況は公式でご確認ください。
+            Web・アプリ・デスクトップの体験イメージをまとめました。対応状況は公式でご確認ください。
           </p>
           <a
             className="btn-primary"
@@ -44,12 +44,12 @@ export default function PlatformPage() {
             target="_blank"
             rel="sponsored noopener noreferrer"
           >
-            公式アプリ/プラットフォームを見る（PR）
+            ババオプションのプラットフォームを見る（PR）
           </a>
         </div>
         <MediaSlot
           src="/partner/platform-banner.webp"
-          alt="プラットフォームイメージ"
+          alt="ババオプション プラットフォームイメージ"
           width={920}
           height={700}
           label="/public/partner/platform-banner.webp"
@@ -83,7 +83,7 @@ export default function PlatformPage() {
             target="_blank"
             rel="sponsored noopener noreferrer"
           >
-            公式サイトへ（PR）
+            ババオプション公式へ（PR）
           </a>
         </div>
       </section>

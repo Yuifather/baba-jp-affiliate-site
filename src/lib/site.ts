@@ -1,11 +1,12 @@
 export const siteConfig = {
-  name: "オプション取引ガイドJP",
-  tagline: "日本語で迷わないためのガイドサイト",
+  name: "バイナリーオプションガイドJP",
+  tagline: "ババオプションを使ってみた感想と使い方メモ",
   description:
-    "BABA Optionの条件や使い方を日本語で整理したガイドサイトです。最新条件は公式サイトで確認してください。",
+    "ババオプションの使い心地・始め方・注意点を日本語で整理したガイドサイトです。最新条件は公式で確認してください。",
   contactEmail: "support@example.com",
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
   officialUrl: "https://www.babaoption.com/",
+  partnerUrl: "https://partnerportal.babaoption.com/visit/?bta=35219&brand=babaoption",
 };
 
 export const navItems = [
@@ -25,5 +26,5 @@ export const footerLinks = [
 ];
 
 export const getPartnerUrl = () => {
-  return process.env.NEXT_PUBLIC_PARTNER_URL ?? siteConfig.officialUrl;
+  return process.env.NEXT_PUBLIC_PARTNER_URL ?? siteConfig.partnerUrl;
 };

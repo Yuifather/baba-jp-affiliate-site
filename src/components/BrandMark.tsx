@@ -9,7 +9,7 @@ export default function BrandMark() {
   return (
     <div className="flex flex-col items-center gap-2">
       <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-black/50">
-        Powered by BABA Option
+        Powered by ババオプション
       </span>
       <div className="h-12 w-32">
         {hasError ? (
@@ -19,7 +19,7 @@ export default function BrandMark() {
         ) : (
           <Image
             src="/partner/logo.svg"
-            alt="BABA Option Partner Logo"
+            alt="ババオプション Partner Logo"
             width={128}
             height={48}
             className="h-12 w-32 object-contain"

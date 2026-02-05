@@ -8,13 +8,13 @@ export default function RiskBanner() {
           PR
         </span>
         <span>
-          ※当サイトはプロモーション（広告）を含みます。当サイトはBABA Optionのパートナーです。
+          ※当サイトはプロモーション（広告）を含みます。当サイトはババオプションのパートナーです。
         </span>
         <span className="hidden text-black/40 sm:inline">|</span>
         <span className="rounded-full bg-amber-200 px-2 py-0.5 text-[11px] font-semibold text-amber-900">
           リスク
         </span>
-        <span>オプション取引には損失の可能性があります。余裕資金で、自己責任で。</span>
+        <span>バイナリーオプション取引には損失の可能性があります。余裕資金で、自己責任で。</span>
         <span className="hidden text-black/40 sm:inline">|</span>
         <Link className="font-semibold text-amber-900 hover:text-amber-700" href="/risk">
           リスク詳細

@@ -6,7 +6,7 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "ボーナス解説",
   description:
-    "入金不要¥5,000ボーナスの概要と注意点を過度な表現を避けて整理したページです。",
+    "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。",
 };
 
 export default function BonusPage() {
@@ -18,10 +18,10 @@ export default function BonusPage() {
         <div className="space-y-4">
           <p className="text-sm font-semibold text-teal-700">キャンペーン解説</p>
           <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
-            入金不要¥5,000ボーナスがある場合のポイント
+            ボーナスがあるときのポイント
           </h1>
           <p className="text-sm text-black/70">
-            ボーナスはキャンペーンの有無や条件で内容が変わります。ここでは一般的な注意点をまとめています。
+            ババオプションのボーナスは時期によって内容が変わります。使ってみて感じたポイントと注意点をまとめました。
           </p>
           <a
             className="btn-primary"
@@ -29,12 +29,12 @@ export default function BonusPage() {
             target="_blank"
             rel="sponsored noopener noreferrer"
           >
-            公式で条件を確認する（PR）
+            ババオプションで条件を確認する（PR）
           </a>
         </div>
         <MediaSlot
           src="/partner/bonus-banner.webp"
-          alt="ボーナス案内イメージ"
+          alt="ババオプション ボーナス案内イメージ"
           width={920}
           height={700}
           label="/public/partner/bonus-banner.webp"
@@ -42,7 +42,7 @@ export default function BonusPage() {
       </section>
 
       <section className="section">
-        <h2 className="section-title">注意しておきたい点</h2>
+          <h2 className="section-title">注意しておきたい点</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <div className="card">
             <h3 className="font-display text-lg text-black">ボーナス自体は出金不可</h3>
@@ -64,7 +64,7 @@ export default function BonusPage() {
           </div>
         </div>
         <p className="mt-4 text-xs text-black/60">
-          ※キャンペーンの有無や適用条件は変更される場合があります。必ず公式条件をご確認ください。
+          ※キャンペーンの有無や適用条件は変更される場合があります。必ず公式でご確認ください。
         </p>
       </section>
 
@@ -80,7 +80,7 @@ export default function BonusPage() {
             target="_blank"
             rel="sponsored noopener noreferrer"
           >
-            公式サイトで詳細を見る（PR）
+            ババオプションで詳細を見る（PR）
           </a>
         </div>
       </section>

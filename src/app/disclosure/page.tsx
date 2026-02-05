@@ -16,7 +16,7 @@ export default function DisclosurePage() {
           PR/広告表記
         </h1>
         <p className="text-sm text-black/70">
-          当サイトはBABA Optionのパートナーとして、プロモーション（広告）を含む情報提供サイトです。
+          当サイトはババオプションのパートナーとして、プロモーション（広告）を含む情報提供サイトです。
         </p>
       </section>
 

@@ -41,7 +41,7 @@ export default function RootLayout({
               <div className="flex flex-wrap items-center gap-4">
                 <BrandMark />
                 <div className="space-y-1">
-                  <span className="tag">ガイドサイト</span>
+                  <span className="tag">体験メモ</span>
                   <Link className="block font-display text-xl text-black" href="/">
                     {siteConfig.name}
                   </Link>
@@ -64,7 +64,7 @@ export default function RootLayout({
                 <div className="space-y-2 text-black/70">
                   <p className="font-semibold text-black">PR表記</p>
                   <p>
-                    ※当サイトはプロモーション（広告）を含みます。当サイトはBABA Optionのパートナーです。
+                    ※当サイトはプロモーション（広告）を含みます。当サイトはババオプションのパートナーです。
                   </p>
                   <p>
                     紹介リンク経由で登録・取引が行われた場合、当サイトは報酬を得ることがあります。
@@ -72,7 +72,7 @@ export default function RootLayout({
                 </div>
                 <div className="space-y-2 text-black/70">
                   <p className="font-semibold text-black">リスク警告 / 免責</p>
-                  <p>オプション取引には損失の可能性があります。余裕資金で、自己責任で行ってください。</p>
+                  <p>バイナリーオプション取引には損失の可能性があります。余裕資金で、自己責任で行ってください。</p>
                   <p>本サイトの内容は情報提供であり、投資助言ではありません。</p>
                 </div>
               </div>

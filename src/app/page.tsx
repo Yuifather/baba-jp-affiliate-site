@@ -9,29 +9,33 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "日本語で迷わないガイド",
   description:
-    "BABA Optionの条件や使い方を日本語で整理したガイドサイト。公式条件の確認から始められます。",
+    "ババオプションの使い方と体験メモを日本語で整理したガイドサイト。公式条件の確認から始められます。",
 };
 
 const featureCards = [
   {
-    title: "$1から取引可能",
-    description: "少額から始められる設計とされています（公式記載ベース）。",
+    title: "$1から試せる設計",
+    description: "小さく始められるのは安心でした（公式記載ベース）。",
   },
   {
     title: "デモ$10,000",
-    description: "練習用デモで操作に慣れてから検討できます。",
+    description: "まずはデモで操作感を確かめられました。",
   },
   {
     title: "最大888%ペイアウト設計",
-    description: "商品・条件により変動します。最新条件は公式でご確認ください。",
+    description: "商品・条件により変動。高めに設定されることがある点は魅力。",
   },
   {
     title: "70+の取引資産",
-    description: "通貨・株式・指数など幅広いカテゴリが対象とされています。",
+    description: "選択肢が多く、気になる銘柄を探しやすい印象です。",
   },
   {
     title: "最短5秒から満期設定",
-    description: "短期〜長期まで柔軟に期間設定できるとされています。",
+    description: "テンポよく試せて楽しい一方、判断は慎重にしたいところ。",
+  },
+  {
+    title: "画面が直感的",
+    description: "ボタン配置が分かりやすく、迷いにくい印象でした。",
   },
 ];
 
@@ -53,11 +57,26 @@ const steps = [
   },
 ];
 
+const impressions = [
+  {
+    title: "使いやすい",
+    description: "画面が見やすく、操作が直感的で迷いにくい印象でした。",
+  },
+  {
+    title: "テンポが良い",
+    description: "短時間で試せるので、触っていて楽しいと感じました。",
+  },
+  {
+    title: "利益の可能性",
+    description: "相場が合えば利益が出る可能性もありますが、保証はありません。",
+  },
+];
+
 const faqItems = [
   {
     question: "公式サイトと何が違いますか？",
     answer:
-      "当サイトは情報整理のためのガイドサイトです。最新の条件・規約・キャンペーンは必ず公式サイトでご確認ください。",
+      "当サイトは体験メモを含むガイドサイトです。最新の条件・規約・キャンペーンは必ず公式でご確認ください。",
   },
   {
     question: "デモ口座はありますか？",
@@ -82,7 +101,7 @@ const faqItems = [
   {
     question: "リスクはありますか？",
     answer:
-      "オプション取引には損失の可能性があります。余裕資金で、自己責任でご利用ください。",
+      "バイナリーオプション取引には損失の可能性があります。余裕資金で、自己責任でご利用ください。",
   },
 ];
 
@@ -94,15 +113,15 @@ export default function Home() {
       <section className="section pt-10">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6">
-            <span className="tag">日本語で迷わないためのガイド</span>
+            <span className="tag">ババオプション体験メモ</span>
             <h1 className="font-display text-4xl font-semibold leading-tight text-black sm:text-5xl">
-              条件も使い方も、
+              触ってみると意外と迷わない、
               <br />
-              日本語で整理してからスタート
+              ババオプションの使い心地
             </h1>
             <p className="text-base text-black/70 sm:text-lg">
-              BABA Optionの条件や使い方を、初心者にも分かりやすくまとめました。最新条件は公式サイトで必ず
-              ご確認ください。
+              バイナリーオプション取引の使い方や感じたポイントを、日本語で整理しました。条件や仕様は変わることがあるため、
+              最新は公式で必ずご確認ください。
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <a
@@ -111,17 +130,19 @@ export default function Home() {
                 target="_blank"
                 rel="sponsored noopener noreferrer"
               >
-                公式で条件を見る（PR）
+                ババオプションを見てみる（PR）
               </a>
               <Link className="btn-secondary" href="/start">
                 はじめ方を見る
               </Link>
             </div>
-            <p className="risk-text">※当サイトはプロモーションを含む情報整理サイトです。</p>
+            <p className="risk-text">
+              ※当サイトはプロモーションを含む体験メモです。利益が出る可能性はありますが、損失の可能性もあります。
+            </p>
           </div>
           <MediaSlot
             src="/partner/hero-banner.webp"
-            alt="BABA Option ガイドイメージ"
+            alt="ババオプション ガイドイメージ"
             width={960}
             height={720}
             label="/public/partner/hero-banner.webp"
@@ -130,9 +151,29 @@ export default function Home() {
       </section>
 
       <section className="section">
+        <div className="card">
+          <div className="flex flex-wrap items-end justify-between gap-2">
+            <div>
+              <p className="text-sm font-semibold text-teal-700">体験メモ</p>
+              <h2 className="section-title">使ってみた感想</h2>
+            </div>
+            <p className="text-sm text-black/60">個人の感想であり、結果を保証するものではありません。</p>
+          </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {impressions.map((item) => (
+              <div key={item.title} className="rounded-2xl border border-black/10 bg-white/80 p-5">
+                <h3 className="font-display text-lg text-black">{item.title}</h3>
+                <p className="mt-2 text-sm text-black/70">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold text-teal-700">公式記載ベース</p>
+            <p className="text-sm font-semibold text-teal-700">体験ベース + 公式記載</p>
             <h2 className="section-title">押さえておきたいポイント</h2>
           </div>
           <p className="text-sm text-black/60">

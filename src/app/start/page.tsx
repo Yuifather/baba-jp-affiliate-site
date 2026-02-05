@@ -8,12 +8,12 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "はじめ方",
   description:
-    "BABA Optionの登録から取引開始までを日本語で段階的に整理したガイドです。",
+    "ババオプションの登録から取引開始までを日本語で段階的に整理したガイドです。",
 };
 
 const steps = [
   {
-    title: "公式サイトから登録",
+    title: "ババオプションで登録",
     description: "メールアドレスとパスワードを設定し、アカウントを作成します。",
     icon: "/images/step-1.svg",
   },
@@ -59,7 +59,7 @@ export default function StartPage() {
             登録から初回取引までの流れ
           </h1>
           <p className="text-sm text-black/70">
-            ここでは一般的な流れをまとめています。実際の画面や条件は公式サイトでご確認ください。
+            実際に触ってみた流れをベースにまとめています。画面や条件は時期によって変わるため、公式でご確認ください。
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -68,7 +68,7 @@ export default function StartPage() {
               target="_blank"
               rel="sponsored noopener noreferrer"
             >
-              公式で登録を進める（PR）
+              ババオプションで登録を進める（PR）
             </a>
             <Link className="btn-secondary" href="/risk">
               リスクを先に確認
@@ -77,7 +77,7 @@ export default function StartPage() {
         </div>
         <MediaSlot
           src="/partner/start-banner.webp"
-          alt="はじめ方イメージ"
+          alt="ババオプション はじめ方イメージ"
           width={920}
           height={700}
           label="/public/partner/start-banner.webp"
