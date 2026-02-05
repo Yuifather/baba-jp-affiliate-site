@@ -5,6 +5,7 @@ import "./globals.css";
 import BrandMark from "@/components/BrandMark";
 import RiskBanner from "@/components/RiskBanner";
 import { footerLinks, navItems, siteConfig } from "@/lib/site";
+import { getSiteUrl } from "@/lib/site-url";
 
 const notoSans = Noto_Sans_JP({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ const shipporiMincho = Shippori_Mincho({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.baseUrl),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,

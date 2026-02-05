@@ -1,12 +1,12 @@
+import { getSiteUrl } from "@/lib/site-url";
+
 export const siteConfig = {
   name: "ババオプション使い方ガイド",
   tagline: "バイナリーオプションの始め方メモ",
   description:
     "バイナリーオプションの使い方・始め方・口座開設・デモ・入金/出金・リスクを、ババオプション中心に日本語で整理したガイドです。最新条件は公式で確認してください。",
   contactEmail: "jaku4305@gmail.com",
-  baseUrl:
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://example.com"),
+  baseUrl: getSiteUrl(),
   officialUrl: "https://www.babaoption.com/",
 };
 

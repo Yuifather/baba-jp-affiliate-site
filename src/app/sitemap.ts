@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/site";
 import { getLastModifiedForRoute } from "@/lib/seo";
+import { getSiteUrl } from "@/lib/site-url";
 
 export const runtime = "nodejs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = siteConfig.baseUrl.replace(/\/$/, "");
+  const baseUrl = getSiteUrl();
   const routes = [
     "",
     "/start",
