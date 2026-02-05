@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import AffiliateCta from "@/components/AffiliateCta";
 import MediaSlot from "@/components/MediaSlot";
 import { getPartnerUrl } from "@/lib/site";
@@ -83,6 +84,27 @@ export default function BonusPage() {
           >
             ババオプションで詳細を見る（PR）
           </a>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="grid gap-6 md:grid-cols-[0.95fr_1.05fr]">
+          <div className="card overflow-hidden p-0">
+            <Image
+              src="/partner/ui-payments.webp"
+              alt="入出金イメージ"
+              width={1152}
+              height={864}
+              className="h-56 w-full object-cover"
+            />
+          </div>
+          <div className="space-y-3">
+            <p className="text-sm font-semibold text-teal-700">入出金の雰囲気</p>
+            <h2 className="section-title">決済まわりも見ておくと安心</h2>
+            <p className="text-sm text-black/70">
+              入出金まわりは実際に使ってみないと分からない点があるので、公式の案内も合わせてチェックしておくと安心です。
+            </p>
+          </div>
         </div>
       </section>
 

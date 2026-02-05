@@ -47,6 +47,19 @@ const checklist = [
   "不明点は公式のFAQやLegal Documentsで確認する",
 ];
 
+const startGallery = [
+  {
+    title: "判定時間の選び方",
+    note: "タイマー/クロックの画面が分かりやすい。",
+    src: "/partner/ui-options.webp",
+  },
+  {
+    title: "デモの雰囲気",
+    note: "本番に近い画面で試せるのが便利。",
+    src: "/partner/ui-multicurrency.webp",
+  },
+];
+
 export default function StartPage() {
   const partnerUrl = getPartnerUrl();
 
@@ -102,6 +115,33 @@ export default function StartPage() {
         <p className="mt-4 text-xs text-black/60">
           ※条件・必要書類は地域やアカウント状況によって異なる場合があります。
         </p>
+      </section>
+
+      <section className="section">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold text-teal-700">画面イメージ</p>
+            <h2 className="section-title">触る前に雰囲気をチェック</h2>
+          </div>
+          <p className="text-sm text-black/60">画面は変更される場合があります。</p>
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          {startGallery.map((item) => (
+            <div key={item.title} className="card overflow-hidden p-0">
+              <Image
+                src={item.src}
+                alt={item.title}
+                width={1152}
+                height={864}
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-4">
+                <p className="text-sm font-semibold text-black">{item.title}</p>
+                <p className="mt-1 text-xs text-black/60">{item.note}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="section">

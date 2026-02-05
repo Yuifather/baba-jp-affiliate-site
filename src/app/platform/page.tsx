@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import AffiliateCta from "@/components/AffiliateCta";
 import MediaSlot from "@/components/MediaSlot";
 import { getPartnerUrl } from "@/lib/site";
@@ -12,15 +13,18 @@ export const metadata: Metadata = {
 const platforms = [
   {
     title: "Web（ブラウザ）",
-    description: "インストール不要。すぐにログインして主要機能を確認できます。",
+    description: "インストール不要。さっと確認できるのが便利でした。",
+    image: "/partner/ui-web.webp",
   },
   {
     title: "モバイルアプリ",
-    description: "外出先でもチャートや取引状況を確認しやすい構成。",
+    description: "移動中でも操作しやすく、触っていて軽快です。",
+    image: "/partner/ui-mobile.webp",
   },
   {
     title: "デスクトップ（HTS）",
-    description: "大画面でチャートを並べたい方に向いた利用方法。",
+    description: "大画面で複数情報を見たい人向け。",
+    image: "/partner/ui-desktop.webp",
   },
 ];
 
@@ -60,9 +64,18 @@ export default function PlatformPage() {
         <h2 className="section-title">代表的な利用シーン</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {platforms.map((platform) => (
-            <div key={platform.title} className="card">
-              <h3 className="font-display text-lg text-black">{platform.title}</h3>
-              <p className="mt-2 text-sm text-black/70">{platform.description}</p>
+            <div key={platform.title} className="card overflow-hidden p-0">
+              <Image
+                src={platform.image}
+                alt={platform.title}
+                width={1152}
+                height={864}
+                className="h-44 w-full object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-display text-lg text-black">{platform.title}</h3>
+                <p className="mt-2 text-sm text-black/70">{platform.description}</p>
+              </div>
             </div>
           ))}
         </div>

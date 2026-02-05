@@ -77,6 +77,24 @@ const impressions = [
   },
 ];
 
+const uiGallery = [
+  {
+    title: "取引画面の雰囲気",
+    note: "画面はシンプル寄りで見やすい印象。",
+    src: "/partner/ui-features.webp",
+  },
+  {
+    title: "オプションタイプ",
+    note: "選択肢が多く、戦略の幅が広がります。",
+    src: "/partner/ui-options.webp",
+  },
+  {
+    title: "多通貨対応",
+    note: "通貨切替がスムーズで使いやすいと感じました。",
+    src: "/partner/ui-multicurrency.webp",
+  },
+];
+
 const faqItems = [
   {
     question: "公式サイトと何が違いますか？",
@@ -176,6 +194,33 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold text-teal-700">画面イメージ</p>
+            <h2 className="section-title">雰囲気をざっくりチェック</h2>
+          </div>
+          <p className="text-sm text-black/60">実際の画面は公式で確認してください。</p>
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {uiGallery.map((item) => (
+            <div key={item.title} className="card overflow-hidden p-0">
+              <Image
+                src={item.src}
+                alt={item.title}
+                width={1152}
+                height={864}
+                className="h-44 w-full object-cover"
+              />
+              <div className="p-4">
+                <p className="text-sm font-semibold text-black">{item.title}</p>
+                <p className="mt-1 text-xs text-black/60">{item.note}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
