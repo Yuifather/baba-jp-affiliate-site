@@ -87,10 +87,8 @@ export default function RootLayout({
             <div className="mx-auto w-full max-w-6xl space-y-6 px-4 py-10 text-sm sm:px-6">
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="space-y-2 text-black/70">
-                  <p className="font-semibold text-black">PR表記</p>
-                  <p>
-                    ※当サイトはプロモーション（広告）を含みます。当サイトはババオプションのパートナーです。
-                  </p>
+                  <p className="font-semibold text-black">サイト方針</p>
+                  <p>当サイトは体験メモを含む情報提供サイトです。最新の条件は公式でご確認ください。</p>
                 </div>
                 <div className="space-y-2 text-black/70">
                   <p className="font-semibold text-black">リスク警告 / 免責</p>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import AffiliateCta from "@/components/AffiliateCta";
 import MediaSlot from "@/components/MediaSlot";
-import { getPartnerUrl } from "@/lib/site";
+import { getOfficialUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "初回入金50%ボーナス",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default function BonusPage() {
-  const partnerUrl = getPartnerUrl();
+  const officialUrl = getOfficialUrl();
 
   return (
     <div className="space-y-12 pt-10">
@@ -30,11 +30,11 @@ export default function BonusPage() {
           </p>
           <a
             className="btn-primary"
-            href={partnerUrl}
+            href={officialUrl}
             target="_blank"
-            rel="sponsored noopener noreferrer"
+            rel="noopener noreferrer"
           >
-            ババオプションで条件を確認する（PR）
+            公式で条件を確認する
           </a>
         </div>
         <MediaSlot
@@ -81,11 +81,11 @@ export default function BonusPage() {
           </p>
           <a
             className="btn-secondary mt-4"
-            href={partnerUrl}
+            href={officialUrl}
             target="_blank"
-            rel="sponsored noopener noreferrer"
+            rel="noopener noreferrer"
           >
-            ババオプションで詳細を見る（PR）
+            公式で詳細を見る
           </a>
         </div>
       </section>

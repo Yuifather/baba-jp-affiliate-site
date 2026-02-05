@@ -8,7 +8,6 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://example.com"),
   officialUrl: "https://www.babaoption.com/",
-  partnerUrl: "https://partnerportal.babaoption.com/visit/?bta=35219&brand=babaoption",
 };
 
 export const navItems = [
@@ -17,16 +16,16 @@ export const navItems = [
   { label: "プラットフォーム", href: "/platform" },
   { label: "FAQ", href: "/faq" },
   { label: "リスク", href: "/risk" },
-  { label: "PR表記", href: "/disclosure" },
+  { label: "サイト方針", href: "/disclosure" },
 ];
 
 export const footerLinks = [
   { label: "プライバシー", href: "/privacy" },
   { label: "お問い合わせ", href: "/contact" },
-  { label: "PR表記", href: "/disclosure" },
+  { label: "サイト方針", href: "/disclosure" },
   { label: "リスク", href: "/risk" },
 ];
 
-export const getPartnerUrl = () => {
-  return process.env.NEXT_PUBLIC_PARTNER_URL ?? siteConfig.partnerUrl;
+export const getOfficialUrl = () => {
+  return siteConfig.officialUrl;
 };

@@ -11,12 +11,12 @@ export default function BrandMark() {
       <div className="h-12 w-32">
         {hasError ? (
           <div className="flex h-full w-full items-center justify-center rounded-xl border border-dashed border-black/20 bg-white/70 text-xs font-semibold text-black/60">
-            Partner Logo
+            Logo
           </div>
         ) : (
           <Image
             src="/partner/logo.svg"
-            alt="ババオプション Partner Logo"
+            alt="ババオプション ロゴ"
             width={128}
             height={48}
             className="h-12 w-32 object-contain"

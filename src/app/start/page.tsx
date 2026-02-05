@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AffiliateCta from "@/components/AffiliateCta";
 import MediaSlot from "@/components/MediaSlot";
-import { getPartnerUrl } from "@/lib/site";
+import { getOfficialUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "はじめ方",
@@ -64,7 +64,7 @@ const startGallery = [
 ];
 
 export default function StartPage() {
-  const partnerUrl = getPartnerUrl();
+  const officialUrl = getOfficialUrl();
 
   return (
     <div className="space-y-12 pt-10">
@@ -80,11 +80,11 @@ export default function StartPage() {
           <div className="flex flex-wrap gap-3">
             <a
               className="btn-primary"
-              href={partnerUrl}
+              href={officialUrl}
               target="_blank"
-              rel="sponsored noopener noreferrer"
+              rel="noopener noreferrer"
             >
-              ババオプションで登録を進める（PR）
+              公式サイトで登録を進める
             </a>
             <Link className="btn-secondary" href="/risk">
               リスクを先に確認

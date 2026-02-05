@@ -1,8 +1,7 @@
-import { getPartnerUrl } from "@/lib/site";
+import { getOfficialUrl } from "@/lib/site";
 
 export default function AffiliateCta() {
-  const partnerUrl = getPartnerUrl();
-  const needsSetup = partnerUrl === "#";
+  const officialUrl = getOfficialUrl();
 
   return (
     <section className="card border-teal-700/20">
@@ -15,21 +14,16 @@ export default function AffiliateCta() {
         </div>
         <a
           className="btn-primary"
-          href={partnerUrl}
+          href={officialUrl}
           target="_blank"
-          rel="sponsored noopener noreferrer"
+          rel="noopener noreferrer"
         >
-          ババオプションへ（PR）
+          公式サイトを見る
         </a>
       </div>
       <p className="risk-text mt-3">
         利益が出る可能性はありますが、損失の可能性もあります。
       </p>
-      {needsSetup ? (
-        <p className="mt-2 text-xs font-semibold text-amber-700">
-          ※環境変数 NEXT_PUBLIC_PARTNER_URL を設定してください。
-        </p>
-      ) : null}
     </section>
   );
 }

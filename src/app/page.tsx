@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import AffiliateCta from "@/components/AffiliateCta";
 import FaqAccordion from "@/components/FaqAccordion";
 import MediaSlot from "@/components/MediaSlot";
-import { getPartnerUrl } from "@/lib/site";
+import { getOfficialUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "ババオプションの使い方ガイド",
@@ -132,7 +132,7 @@ const faqItems = [
 ];
 
 export default function Home() {
-  const partnerUrl = getPartnerUrl();
+  const officialUrl = getOfficialUrl();
 
   return (
     <div>
@@ -152,11 +152,11 @@ export default function Home() {
             <div className="flex flex-wrap items-center gap-3">
               <a
                 className="btn-primary"
-                href={partnerUrl}
+                href={officialUrl}
                 target="_blank"
-                rel="sponsored noopener noreferrer"
+                rel="noopener noreferrer"
               >
-                ババオプションを見てみる（PR）
+                公式サイトを見る
               </a>
               <Link className="btn-secondary" href="/start">
                 はじめ方を見る
@@ -167,7 +167,7 @@ export default function Home() {
               <p className="mt-1 text-xs text-amber-900/80">{bonusHighlight.note}</p>
             </div>
             <p className="risk-text">
-              ※当サイトはプロモーションを含む体験メモです。利益が出る可能性はありますが、損失の可能性もあります。
+              ※当サイトは体験メモを含む情報提供です。利益が出る可能性はありますが、損失の可能性もあります。
             </p>
           </div>
           <MediaSlot
