@@ -5,6 +5,7 @@ export const siteConfig = {
     "BABA Optionの条件や使い方を日本語で整理した非公式ガイドです。最新条件は公式サイトで確認してください。",
   contactEmail: "support@example.com",
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
+  officialUrl: "https://www.babaoption.com/",
 };
 
 export const navItems = [
@@ -24,5 +25,5 @@ export const footerLinks = [
 ];
 
 export const getPartnerUrl = () => {
-  return process.env.NEXT_PUBLIC_PARTNER_URL ?? "#";
+  return process.env.NEXT_PUBLIC_PARTNER_URL ?? siteConfig.officialUrl;
 };
