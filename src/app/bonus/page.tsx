@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import AffiliateCta from "@/components/AffiliateCta";
 import MediaSlot from "@/components/MediaSlot";
+import PageMeta from "@/components/PageMeta";
+import RelatedLinks from "@/components/RelatedLinks";
 import { getOfficialUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -10,6 +12,17 @@ export const metadata: Metadata = {
     "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。2026年2月6日から初回入金50%ボーナス。",
   alternates: {
     canonical: "/bonus",
+  },
+  openGraph: {
+    title: "初回入金50%ボーナス",
+    description:
+      "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。2026年2月6日から初回入金50%ボーナス。",
+    url: "/bonus",
+  },
+  twitter: {
+    title: "初回入金50%ボーナス",
+    description:
+      "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。2026年2月6日から初回入金50%ボーナス。",
   },
 };
 
@@ -158,6 +171,17 @@ export default function BonusPage() {
       </section>
 
       <AffiliateCta />
+
+      <RelatedLinks
+        items={[
+          { label: "はじめ方", href: "/start" },
+          { label: "プラットフォーム", href: "/platform" },
+          { label: "FAQ", href: "/faq" },
+          { label: "リスク/免責", href: "/risk" },
+        ]}
+      />
+
+      <PageMeta lastUpdated="2026年2月5日" />
     </div>
   );
 }

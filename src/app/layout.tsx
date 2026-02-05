@@ -35,6 +35,10 @@ export const metadata: Metadata = {
     "入金ボーナス",
     "プラットフォーム",
   ],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
@@ -51,18 +55,39 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const logoUrl = new URL("/partner/logo.svg", siteConfig.baseUrl).toString();
   const siteJsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: siteConfig.name,
-    url: siteConfig.baseUrl,
-    description: siteConfig.description,
-    inLanguage: "ja-JP",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: siteConfig.name,
+        url: siteConfig.baseUrl,
+        logo: logoUrl,
+        contactPoint: {
+          "@type": "ContactPoint",
+          email: siteConfig.contactEmail,
+          contactType: "customer support",
+        },
+      },
+      {
+        "@type": "WebSite",
+        name: siteConfig.name,
+        url: siteConfig.baseUrl,
+        description: siteConfig.description,
+        inLanguage: "ja-JP",
+      },
+    ],
   };
 
   return (

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import FaqAccordion from "@/components/FaqAccordion";
 import AffiliateCta from "@/components/AffiliateCta";
+import PageMeta from "@/components/PageMeta";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -8,6 +10,17 @@ export const metadata: Metadata = {
     "バイナリーオプション/ババオプションに関するよくある質問を日本語で整理したFAQです。",
   alternates: {
     canonical: "/faq",
+  },
+  openGraph: {
+    title: "FAQ",
+    description:
+      "バイナリーオプション/ババオプションに関するよくある質問を日本語で整理したFAQです。",
+    url: "/faq",
+  },
+  twitter: {
+    title: "FAQ",
+    description:
+      "バイナリーオプション/ババオプションに関するよくある質問を日本語で整理したFAQです。",
   },
 };
 
@@ -79,6 +92,17 @@ export default function FaqPage() {
       </section>
 
       <AffiliateCta />
+
+      <RelatedLinks
+        items={[
+          { label: "はじめ方", href: "/start" },
+          { label: "ボーナス", href: "/bonus" },
+          { label: "リスク/免責", href: "/risk" },
+          { label: "お問い合わせ", href: "/contact" },
+        ]}
+      />
+
+      <PageMeta lastUpdated="2026年2月5日" />
     </div>
   );
 }

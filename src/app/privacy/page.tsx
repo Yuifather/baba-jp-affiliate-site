@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
+import PageMeta from "@/components/PageMeta";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー",
   description: "当サイトの個人情報の取扱いについて説明します。",
   alternates: {
     canonical: "/privacy",
+  },
+  openGraph: {
+    title: "プライバシーポリシー",
+    description: "当サイトの個人情報の取扱いについて説明します。",
+    url: "/privacy",
+  },
+  twitter: {
+    title: "プライバシーポリシー",
+    description: "当サイトの個人情報の取扱いについて説明します。",
   },
 };
 
@@ -63,6 +74,16 @@ export default function PrivacyPage() {
           <p className="text-sm text-black/70">{siteConfig.contactEmail} までご連絡ください。</p>
         </div>
       </section>
+
+      <RelatedLinks
+        items={[
+          { label: "ご案内", href: "/disclosure" },
+          { label: "リスク/免責", href: "/risk" },
+          { label: "お問い合わせ", href: "/contact" },
+        ]}
+      />
+
+      <PageMeta lastUpdated="2026年2月5日" />
     </div>
   );
 }

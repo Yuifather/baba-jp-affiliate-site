@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import AffiliateCta from "@/components/AffiliateCta";
 import FaqAccordion from "@/components/FaqAccordion";
 import MediaSlot from "@/components/MediaSlot";
+import PageMeta from "@/components/PageMeta";
+import RelatedLinks from "@/components/RelatedLinks";
 import { getOfficialUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -12,6 +14,17 @@ export const metadata: Metadata = {
     "ババオプション（バイナリーオプション）の使い方と始め方を日本語でまとめたガイドサイト。公式条件の確認から始められます。",
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    title: "ババオプションの使い方ガイド",
+    description:
+      "ババオプション（バイナリーオプション）の使い方と始め方を日本語でまとめたガイドサイト。公式条件の確認から始められます。",
+    url: "/",
+  },
+  twitter: {
+    title: "ババオプションの使い方ガイド",
+    description:
+      "ババオプション（バイナリーオプション）の使い方と始め方を日本語でまとめたガイドサイト。公式条件の確認から始められます。",
   },
 };
 
@@ -63,6 +76,16 @@ const steps = [
     description: "デモで練習後、必要に応じて入金して取引を始めます。",
     icon: "/images/step-3.svg",
   },
+];
+
+const quickLinks = [
+  { label: "はじめ方", href: "/start" },
+  { label: "ボーナス", href: "/bonus" },
+  { label: "プラットフォーム", href: "/platform" },
+  { label: "FAQ", href: "/faq" },
+  { label: "リスク/免責", href: "/risk" },
+  { label: "プライバシー", href: "/privacy" },
+  { label: "お問い合わせ", href: "/contact" },
 ];
 
 const impressions = [
@@ -189,6 +212,26 @@ export default function Home() {
 
       <section className="section">
         <div className="card">
+          <p className="text-sm font-semibold text-teal-700">クイックリンク</p>
+          <p className="mt-1 text-sm text-black/60">
+            はじめての方向けに、主要ページをまとめました。
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3 text-sm text-black/70">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded-full border border-black/10 bg-white/70 px-3 py-1 hover:text-black"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="card">
           <div className="flex flex-wrap items-end justify-between gap-2">
             <div>
               <p className="text-sm font-semibold text-teal-700">体験メモ</p>
@@ -252,6 +295,17 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <p className="mt-4 text-xs text-black/60">
+          数値や条件の出典は公式サイトをご確認ください。{" "}
+          <a
+            href={officialUrl}
+            className="font-semibold text-teal-700 hover:text-teal-900"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            公式サイトを見る
+          </a>
+        </p>
       </section>
 
       <AffiliateCta />
@@ -327,6 +381,17 @@ export default function Home() {
       <div className="section">
         <AffiliateCta />
       </div>
+
+      <RelatedLinks
+        title="次に読む"
+        items={[
+          { label: "はじめ方", href: "/start" },
+          { label: "ボーナス", href: "/bonus" },
+          { label: "リスク/免責", href: "/risk" },
+        ]}
+      />
+
+      <PageMeta lastUpdated="2026年2月5日" />
     </div>
   );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import AffiliateCta from "@/components/AffiliateCta";
 import MediaSlot from "@/components/MediaSlot";
+import PageMeta from "@/components/PageMeta";
+import RelatedLinks from "@/components/RelatedLinks";
 import { getOfficialUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -10,6 +12,17 @@ export const metadata: Metadata = {
     "バイナリーオプションの取引環境として、ババオプションのWeb・アプリ・デスクトップの利用イメージを紹介するページです。",
   alternates: {
     canonical: "/platform",
+  },
+  openGraph: {
+    title: "プラットフォーム",
+    description:
+      "バイナリーオプションの取引環境として、ババオプションのWeb・アプリ・デスクトップの利用イメージを紹介するページです。",
+    url: "/platform",
+  },
+  twitter: {
+    title: "プラットフォーム",
+    description:
+      "バイナリーオプションの取引環境として、ババオプションのWeb・アプリ・デスクトップの利用イメージを紹介するページです。",
   },
 };
 
@@ -109,6 +122,17 @@ export default function PlatformPage() {
       </section>
 
       <AffiliateCta />
+
+      <RelatedLinks
+        items={[
+          { label: "はじめ方", href: "/start" },
+          { label: "ボーナス", href: "/bonus" },
+          { label: "FAQ", href: "/faq" },
+          { label: "リスク/免責", href: "/risk" },
+        ]}
+      />
+
+      <PageMeta lastUpdated="2026年2月5日" />
     </div>
   );
 }

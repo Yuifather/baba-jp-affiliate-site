@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import AffiliateCta from "@/components/AffiliateCta";
 import MediaSlot from "@/components/MediaSlot";
+import PageMeta from "@/components/PageMeta";
+import RelatedLinks from "@/components/RelatedLinks";
 import { getOfficialUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -11,6 +13,17 @@ export const metadata: Metadata = {
     "バイナリーオプションの始め方として、ババオプションの登録から取引開始までを日本語で段階的に整理したガイドです。",
   alternates: {
     canonical: "/start",
+  },
+  openGraph: {
+    title: "はじめ方",
+    description:
+      "バイナリーオプションの始め方として、ババオプションの登録から取引開始までを日本語で段階的に整理したガイドです。",
+    url: "/start",
+  },
+  twitter: {
+    title: "はじめ方",
+    description:
+      "バイナリーオプションの始め方として、ババオプションの登録から取引開始までを日本語で段階的に整理したガイドです。",
   },
 };
 
@@ -50,6 +63,20 @@ const checklist = [
   "不明点は公式のFAQやLegal Documentsで確認する",
 ];
 
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "ババオプションの始め方",
+  description:
+    "登録から初回取引までの流れを、実際の画面イメージに沿って整理したガイドです。",
+  step: steps.map((step, index) => ({
+    "@type": "HowToStep",
+    position: index + 1,
+    name: step.title,
+    text: step.description,
+  })),
+};
+
 const startGallery = [
   {
     title: "判定時間の選び方",
@@ -73,6 +100,10 @@ export default function StartPage() {
 
   return (
     <div className="space-y-12 pt-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
       <section className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
         <div className="bg-hero-panel" aria-hidden="true" />
         <div className="relative grid gap-8 px-4 pb-8 pt-10 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]">
@@ -174,6 +205,17 @@ export default function StartPage() {
       </section>
 
       <AffiliateCta />
+
+      <RelatedLinks
+        items={[
+          { label: "ボーナス", href: "/bonus" },
+          { label: "プラットフォーム", href: "/platform" },
+          { label: "FAQ", href: "/faq" },
+          { label: "リスク/免責", href: "/risk" },
+        ]}
+      />
+
+      <PageMeta lastUpdated="2026年2月5日" />
     </div>
   );
 }

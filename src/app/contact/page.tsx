@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
+import PageMeta from "@/components/PageMeta";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
   title: "お問い合わせ",
   description: "当サイトへのお問い合わせ方法を記載しています。",
   alternates: {
     canonical: "/contact",
+  },
+  openGraph: {
+    title: "お問い合わせ",
+    description: "当サイトへのお問い合わせ方法を記載しています。",
+    url: "/contact",
+  },
+  twitter: {
+    title: "お問い合わせ",
+    description: "当サイトへのお問い合わせ方法を記載しています。",
   },
 };
 
@@ -35,6 +46,16 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
+
+      <RelatedLinks
+        items={[
+          { label: "プライバシー", href: "/privacy" },
+          { label: "ご案内", href: "/disclosure" },
+          { label: "リスク/免責", href: "/risk" },
+        ]}
+      />
+
+      <PageMeta lastUpdated="2026年2月5日" />
     </div>
   );
 }

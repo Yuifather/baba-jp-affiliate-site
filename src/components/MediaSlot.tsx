@@ -47,7 +47,7 @@ export default function MediaSlot({
       {(!loaded || error) && (
         <div className="flex h-full w-full items-center justify-center p-6 text-center">
           <div>
-            <p className="text-sm font-semibold text-black/70">Partner Image Placeholder</p>
+            <p className="text-sm font-semibold text-black/70">Image Placeholder</p>
             <p className="text-xs text-black/50">{label}</p>
           </div>
         </div>
