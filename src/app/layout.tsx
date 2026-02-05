@@ -56,9 +56,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteConfig.name,
+    url: siteConfig.baseUrl,
+    description: siteConfig.description,
+    inLanguage: "ja-JP",
+  };
+
   return (
     <html lang="ja">
       <body className={`${notoSans.variable} ${shipporiMincho.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
         <div className="min-h-screen">
           <RiskBanner />
           <header className="border-b border-black/10 bg-white/70 backdrop-blur">
@@ -66,7 +79,7 @@ export default function RootLayout({
               <div className="flex flex-wrap items-center gap-4">
                 <BrandMark />
                 <div className="space-y-1">
-                  <span className="tag">使ってみたメモ</span>
+                  <span className="tag">使い方メモ</span>
                   <Link className="block font-display text-xl text-black" href="/">
                     {siteConfig.name}
                   </Link>
@@ -87,7 +100,7 @@ export default function RootLayout({
             <div className="mx-auto w-full max-w-6xl space-y-6 px-4 py-10 text-sm sm:px-6">
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="space-y-2 text-black/70">
-                  <p className="font-semibold text-black">サイト方針</p>
+                  <p className="font-semibold text-black">ご案内</p>
                   <p>当サイトは体験メモを含む情報提供サイトです。最新の条件は公式でご確認ください。</p>
                 </div>
                 <div className="space-y-2 text-black/70">

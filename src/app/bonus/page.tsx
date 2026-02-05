@@ -7,7 +7,7 @@ import { getOfficialUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "初回入金50%ボーナス",
   description:
-    "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。明日(2026年2月6日)から初回入金50%ボーナス。",
+    "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。2026年2月6日から初回入金50%ボーナス。",
   alternates: {
     canonical: "/bonus",
   },
@@ -22,10 +22,10 @@ export default function BonusPage() {
         <div className="space-y-4">
           <p className="text-sm font-semibold text-teal-700">キャンペーン解説</p>
           <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
-            明日（2026年2月6日）から初回入金50%ボーナス
+            2026年2月6日から初回入金50%ボーナス
           </h1>
           <p className="text-sm text-black/70">
-            現在案内されている主なキャンペーンは初回入金50%ボーナスです。ここでは明日開始予定の内容に触れつつ、
+            現在案内されている主なキャンペーンは初回入金50%ボーナスです。ここでは2026年2月6日開始予定の内容に触れつつ、
             使ってみて感じたポイントと注意点をまとめました。
           </p>
           <a
@@ -69,7 +69,7 @@ export default function BonusPage() {
           </div>
         </div>
         <p className="mt-4 text-xs text-black/60">
-          ※キャンペーンの有無や適用条件は変更される場合があります。明日開始予定の内容も公式で必ずご確認ください。
+          ※キャンペーンの有無や適用条件は変更される場合があります。2026年2月6日開始予定の内容も公式で必ずご確認ください。
         </p>
       </section>
 

@@ -10,6 +10,7 @@ type MediaSlotProps = {
   height: number;
   label: string;
   className?: string;
+  objectPosition?: string;
 };
 
 export default function MediaSlot({
@@ -19,14 +20,14 @@ export default function MediaSlot({
   height,
   label,
   className = "",
+  objectPosition = "center",
 }: MediaSlotProps) {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
 
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl border border-black/10 bg-gradient-to-br from-amber-100 via-white to-teal-100 ${className}`}
-      style={{ minHeight: "220px" }}
+      className={`relative aspect-[4/3] overflow-hidden rounded-3xl border border-black/10 bg-gradient-to-br from-amber-100 via-white to-teal-100 shadow-sm ${className}`}
     >
       {!error && (
         <Image
@@ -37,6 +38,7 @@ export default function MediaSlot({
           className={`h-full w-full object-cover transition-opacity ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
+          style={{ objectPosition }}
           onLoadingComplete={() => setLoaded(true)}
           onError={() => setError(true)}
           priority

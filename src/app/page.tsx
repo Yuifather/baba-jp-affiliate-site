@@ -9,7 +9,7 @@ import { getOfficialUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "ババオプションの使い方ガイド",
   description:
-    "ババオプション（バイナリーオプション）の使い方と体験メモを日本語でまとめたガイドサイト。公式条件の確認から始められます。",
+    "ババオプション（バイナリーオプション）の使い方と始め方を日本語でまとめたガイドサイト。公式条件の確認から始められます。",
   alternates: {
     canonical: "/",
   },
@@ -43,7 +43,7 @@ const featureCards = [
 ];
 
 const bonusHighlight = {
-  title: "明日（2026年2月6日）から初回入金50%ボーナスの案内",
+  title: "2026年2月6日から初回入金50%ボーナスの案内",
   note: "開始日・条件は変更される場合があります。必ず公式でご確認ください。",
 };
 
@@ -139,7 +139,7 @@ export default function Home() {
       <section className="section pt-10">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6">
-            <span className="tag">ババオプション 使ってみたメモ</span>
+            <span className="tag">バイナリーオプション 使い方メモ</span>
             <h1 className="font-display text-4xl font-semibold leading-tight text-black sm:text-5xl">
               意外とシンプルで、
               <br />
@@ -216,7 +216,7 @@ export default function Home() {
                 alt={item.title}
                 width={1152}
                 height={864}
-                className="h-44 w-full object-cover"
+                className="h-48 w-full object-cover"
               />
               <div className="p-4">
                 <p className="text-sm font-semibold text-black">{item.title}</p>

@@ -73,7 +73,7 @@ export default function PlatformPage() {
                 alt={platform.title}
                 width={1152}
                 height={864}
-                className="h-44 w-full object-cover"
+                className="h-48 w-full object-cover"
               />
               <div className="p-4">
                 <h3 className="font-display text-lg text-black">{platform.title}</h3>
