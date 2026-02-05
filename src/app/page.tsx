@@ -9,7 +9,7 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "日本語で迷わないガイド",
   description:
-    "BABA Optionの条件や使い方を日本語で整理した非公式ガイド。公式条件の確認から始められます。",
+    "BABA Optionの条件や使い方を日本語で整理したガイドサイト。公式条件の確認から始められます。",
 };
 
 const featureCards = [
@@ -57,7 +57,7 @@ const faqItems = [
   {
     question: "公式サイトと何が違いますか？",
     answer:
-      "当サイトは非公式のガイドです。最新の条件・規約・キャンペーンは必ず公式サイトでご確認ください。",
+      "当サイトは情報整理のためのガイドサイトです。最新の条件・規約・キャンペーンは必ず公式サイトでご確認ください。",
   },
   {
     question: "デモ口座はありますか？",
@@ -94,7 +94,7 @@ export default function Home() {
       <section className="section pt-10">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6">
-            <span className="tag">日本語で迷わないための非公式ガイド</span>
+            <span className="tag">日本語で迷わないためのガイド</span>
             <h1 className="font-display text-4xl font-semibold leading-tight text-black sm:text-5xl">
               条件も使い方も、
               <br />
@@ -117,7 +117,7 @@ export default function Home() {
                 はじめ方を見る
               </Link>
             </div>
-            <p className="risk-text">※当サイトはプロモーションを含む非公式ガイドです。</p>
+            <p className="risk-text">※当サイトはプロモーションを含む情報整理サイトです。</p>
           </div>
           <MediaSlot
             src="/partner/hero-banner.webp"

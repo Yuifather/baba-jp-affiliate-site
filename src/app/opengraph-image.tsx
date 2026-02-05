@@ -26,7 +26,7 @@ export default function OpenGraphImage() {
         }}
       >
         <div style={{ fontSize: 24, letterSpacing: 4, textTransform: "uppercase", color: "#0f766e" }}>
-          非公式ガイド
+          GUIDE SITE
         </div>
         <div style={{ fontSize: 68, fontWeight: 700, lineHeight: 1.05 }}>{siteConfig.name}</div>
         <div style={{ fontSize: 28, color: "#475569" }}>{siteConfig.tagline}</div>

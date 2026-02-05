@@ -8,7 +8,7 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "はじめ方",
   description:
-    "BABA Optionの登録から取引開始までを日本語で段階的に整理した非公式ガイドです。",
+    "BABA Optionの登録から取引開始までを日本語で段階的に整理したガイドです。",
 };
 
 const steps = [

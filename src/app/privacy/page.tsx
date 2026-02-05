@@ -15,7 +15,7 @@ export default function PrivacyPage() {
           プライバシーポリシー
         </h1>
         <p className="text-sm text-black/70">
-          当サイトは非公式ガイドとして、必要最小限の情報のみを取り扱います。
+          当サイトはガイドサイトとして、必要最小限の情報のみを取り扱います。
         </p>
       </section>
 

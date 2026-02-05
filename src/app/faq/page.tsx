@@ -4,14 +4,14 @@ import AffiliateCta from "@/components/AffiliateCta";
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description: "BABA Optionに関するよくある質問を日本語で整理した非公式FAQです。",
+  description: "BABA Optionに関するよくある質問を日本語で整理したFAQです。",
 };
 
 const faqItems = [
   {
     question: "当サイトは公式サイトですか？",
     answer:
-      "いいえ、当サイトは非公式のガイドです。最新の条件や規約は必ず公式サイトでご確認ください。",
+      "当サイトは情報整理のためのガイドサイトです。最新の条件や規約は必ず公式サイトでご確認ください。",
   },
   {
     question: "デモ口座の利用は可能ですか？",

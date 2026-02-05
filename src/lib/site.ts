@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "オプション取引ガイドJP",
-  tagline: "日本語で迷わないための非公式ガイド",
+  tagline: "日本語で迷わないためのガイドサイト",
   description:
-    "BABA Optionの条件や使い方を日本語で整理した非公式ガイドです。最新条件は公式サイトで確認してください。",
+    "BABA Optionの条件や使い方を日本語で整理したガイドサイトです。最新条件は公式サイトで確認してください。",
   contactEmail: "support@example.com",
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
   officialUrl: "https://www.babaoption.com/",

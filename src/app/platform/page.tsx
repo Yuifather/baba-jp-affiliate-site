@@ -6,7 +6,7 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "プラットフォーム",
   description:
-    "Web・アプリ・デスクトップでの利用イメージを紹介する非公式ガイドです。",
+    "Web・アプリ・デスクトップでの利用イメージを紹介するガイドページです。",
 };
 
 const platforms = [
