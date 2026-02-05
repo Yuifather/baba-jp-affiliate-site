@@ -4,7 +4,9 @@ export const siteConfig = {
   description:
     "ババオプションの使い心地・始め方・注意点を日本語でまとめたガイドです。最新条件は公式で確認してください。",
   contactEmail: "support@example.com",
-  baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
+  baseUrl:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://example.com"),
   officialUrl: "https://www.babaoption.com/",
   partnerUrl: "https://partnerportal.babaoption.com/visit/?bta=35219&brand=babaoption",
 };

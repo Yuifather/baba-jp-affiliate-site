@@ -7,9 +7,9 @@ import MediaSlot from "@/components/MediaSlot";
 import { getPartnerUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "日本語で迷わないガイド",
+  title: "ババオプションの使い方ガイド",
   description:
-    "ババオプションを使ってみた感想と使い方を日本語でまとめたガイドサイト。公式条件の確認から始められます。",
+    "ババオプション（バイナリーオプション）の使い方と体験メモを日本語でまとめたガイドサイト。公式条件の確認から始められます。",
 };
 
 const featureCards = [
@@ -282,14 +282,14 @@ export default function Home() {
           />
           <div className="space-y-4">
             <p className="text-sm font-semibold text-teal-700">ボーナスの注意点</p>
-            <h2 className="section-title">入金不要¥5,000の案内がある場合</h2>
+            <h2 className="section-title">初回入金50%ボーナスの案内</h2>
             <p className="text-sm text-black/70">
-              キャンペーンは期間や条件により変わります。ボーナスを利用する場合は、以下の注意点を必ず確認しましょう。
+              現在案内されている主なキャンペーンは初回入金50%ボーナスです。条件は変わるため、必ず公式で確認してください。
             </p>
             <ul className="space-y-2 text-sm text-black/70">
-              <li>ボーナス自体は出金できない場合があります。</li>
-              <li>ボーナスで得た利益は出金可能とされる場合があります。</li>
-              <li>出金時にボーナス比率が差し引かれる、または条件により消滅する場合があります。</li>
+              <li>ボーナスは取引用の資金として付与される場合があります。</li>
+              <li>ボーナス自体は出金不可とされることがあります。</li>
+              <li>出金時に条件未達で消滅する、または比率が調整される場合があります。</li>
             </ul>
             <Link className="text-sm font-semibold text-teal-700" href="/bonus">
               ボーナス詳細を読む →

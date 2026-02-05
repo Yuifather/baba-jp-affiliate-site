@@ -5,7 +5,7 @@ import MediaSlot from "@/components/MediaSlot";
 import { getPartnerUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "ボーナス解説",
+  title: "初回入金50%ボーナス",
   description:
     "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。明日(2026年2月6日)から初回入金50%ボーナス。",
 };
@@ -22,7 +22,7 @@ export default function BonusPage() {
             明日（2026年2月6日）から初回入金50%ボーナス
           </h1>
           <p className="text-sm text-black/70">
-            ババオプションのボーナスは時期によって内容が変わります。ここでは明日開始予定の初回入金ボーナスに触れつつ、
+            現在案内されている主なキャンペーンは初回入金50%ボーナスです。ここでは明日開始予定の内容に触れつつ、
             使ってみて感じたポイントと注意点をまとめました。
           </p>
           <a
