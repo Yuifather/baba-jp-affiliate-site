@@ -7,7 +7,10 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "プラットフォーム",
   description:
-    "ババオプションのWeb・アプリ・デスクトップの利用イメージを紹介するページです。",
+    "バイナリーオプションの取引環境として、ババオプションのWeb・アプリ・デスクトップの利用イメージを紹介するページです。",
+  alternates: {
+    canonical: "/platform",
+  },
 };
 
 const platforms = [

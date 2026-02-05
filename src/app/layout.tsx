@@ -19,11 +19,36 @@ const shipporiMincho = Shippori_Mincho({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.baseUrl),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  keywords: [
+    "ババオプション",
+    "バイナリーオプション",
+    "使い方",
+    "始め方",
+    "口座開設",
+    "デモ口座",
+    "入金ボーナス",
+    "プラットフォーム",
+  ],
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.baseUrl,
+    siteName: siteConfig.name,
+    locale: "ja_JP",
+    type: "website",
+    images: ["/opengraph-image"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+  },
 };
 
 export default function RootLayout({

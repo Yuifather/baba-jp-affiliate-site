@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "ババオプションの使い方ガイド",
   description:
     "ババオプション（バイナリーオプション）の使い方と体験メモを日本語でまとめたガイドサイト。公式条件の確認から始められます。",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const featureCards = [

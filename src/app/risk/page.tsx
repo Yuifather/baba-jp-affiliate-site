@@ -4,6 +4,9 @@ import AffiliateCta from "@/components/AffiliateCta";
 export const metadata: Metadata = {
   title: "リスクと注意点",
   description: "バイナリーオプション取引に関する主なリスクと注意点をまとめています。",
+  alternates: {
+    canonical: "/risk",
+  },
 };
 
 const riskPoints = [

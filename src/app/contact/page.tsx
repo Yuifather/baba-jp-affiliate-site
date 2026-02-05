@@ -4,6 +4,9 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "お問い合わせ",
   description: "当サイトへのお問い合わせ方法を記載しています。",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

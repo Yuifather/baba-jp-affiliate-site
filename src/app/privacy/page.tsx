@@ -4,6 +4,9 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "プライバシーポリシー",
   description: "当サイトの個人情報の取扱いについて説明します。",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {

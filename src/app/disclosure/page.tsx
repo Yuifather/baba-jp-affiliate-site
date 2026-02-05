@@ -3,8 +3,10 @@ import AffiliateCta from "@/components/AffiliateCta";
 
 export const metadata: Metadata = {
   title: "PR/広告表記",
-  description:
-    "当サイトのパートナー関係と報酬に関する一般的な説明を記載しています。",
+  description: "当サイトのパートナー関係とPR/広告表記について説明します。",
+  alternates: {
+    canonical: "/disclosure",
+  },
 };
 
 export default function DisclosurePage() {

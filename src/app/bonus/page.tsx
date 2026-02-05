@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "初回入金50%ボーナス",
   description:
     "ババオプションのキャンペーン/ボーナスの概要と注意点を整理したページです。明日(2026年2月6日)から初回入金50%ボーナス。",
+  alternates: {
+    canonical: "/bonus",
+  },
 };
 
 export default function BonusPage() {

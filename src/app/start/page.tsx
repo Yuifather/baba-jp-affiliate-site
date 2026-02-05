@@ -8,7 +8,10 @@ import { getPartnerUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "はじめ方",
   description:
-    "ババオプションの登録から取引開始までを日本語で段階的に整理したガイドです。",
+    "バイナリーオプションの始め方として、ババオプションの登録から取引開始までを日本語で段階的に整理したガイドです。",
+  alternates: {
+    canonical: "/start",
+  },
 };
 
 const steps = [

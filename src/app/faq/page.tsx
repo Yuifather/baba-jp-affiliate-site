@@ -4,7 +4,11 @@ import AffiliateCta from "@/components/AffiliateCta";
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description: "ババオプションに関するよくある質問を日本語で整理したFAQです。",
+  description:
+    "バイナリーオプション/ババオプションに関するよくある質問を日本語で整理したFAQです。",
+  alternates: {
+    canonical: "/faq",
+  },
 };
 
 const faqItems = [
@@ -40,9 +44,26 @@ const faqItems = [
   },
 ];
 
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 export default function FaqPage() {
   return (
     <div className="space-y-12 pt-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
       <section className="space-y-4">
         <p className="text-sm font-semibold text-teal-700">FAQ</p>
         <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
