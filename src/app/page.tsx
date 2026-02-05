@@ -84,7 +84,7 @@ const uiGallery = [
   {
     title: "取引画面の雰囲気",
     note: "画面はシンプル寄りで見やすい印象。",
-    src: "/partner/ui-features.webp",
+    src: "/partner/ui-history.webp",
   },
   {
     title: "オプションタイプ",
@@ -92,9 +92,14 @@ const uiGallery = [
     src: "/partner/ui-options.webp",
   },
   {
-    title: "多通貨対応",
-    note: "通貨切替がスムーズで使いやすいと感じました。",
-    src: "/partner/ui-multicurrency.webp",
+    title: "銘柄の一覧",
+    note: "一覧で見られると探しやすい。",
+    src: "/partner/ui-symbols.webp",
+  },
+  {
+    title: "マルチチャート",
+    note: "同時に複数の動きを確認しやすい。",
+    src: "/partner/ui-multichart.webp",
   },
 ];
 
@@ -136,8 +141,9 @@ export default function Home() {
 
   return (
     <div>
-      <section className="section pt-10">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="section relative overflow-hidden rounded-3xl border border-black/10 bg-white/70 pt-10 shadow-sm">
+        <div className="bg-hero-panel" aria-hidden="true" />
+        <div className="relative grid items-center gap-10 px-4 pb-10 pt-6 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6">
             <span className="tag">バイナリーオプション 使い方メモ</span>
             <h1 className="font-display text-4xl font-semibold leading-tight text-black sm:text-5xl">
@@ -175,6 +181,7 @@ export default function Home() {
             alt="ババオプション ガイドイメージ"
             width={960}
             height={720}
+            objectPosition="right center"
             label="/public/partner/hero-banner.webp"
           />
         </div>
@@ -208,15 +215,15 @@ export default function Home() {
           </div>
           <p className="text-sm text-black/60">実際の画面は公式で確認してください。</p>
         </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {uiGallery.map((item) => (
-            <div key={item.title} className="card overflow-hidden p-0">
+            <div key={item.title} className="card overflow-hidden p-0 bg-white/90">
               <Image
                 src={item.src}
                 alt={item.title}
                 width={1152}
                 height={864}
-                className="h-48 w-full object-cover"
+                className="h-44 w-full object-cover"
               />
               <div className="p-4">
                 <p className="text-sm font-semibold text-black">{item.title}</p>
@@ -227,7 +234,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-sm font-semibold text-teal-700">体験ベース + 公式記載</p>
@@ -249,7 +256,7 @@ export default function Home() {
 
       <AffiliateCta />
 
-      <section className="section" id="start">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8" id="start">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-sm font-semibold text-teal-700">はじめての方へ</p>
@@ -274,13 +281,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <MediaSlot
             src="/partner/bonus-banner.webp"
             alt="ボーナス案内イメージ"
             width={960}
             height={720}
+            objectPosition="right center"
             label="/public/partner/bonus-banner.webp"
           />
           <div className="space-y-4">
@@ -301,7 +309,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-sm font-semibold text-teal-700">よくある質問</p>

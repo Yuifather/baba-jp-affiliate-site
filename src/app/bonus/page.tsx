@@ -18,8 +18,10 @@ export default function BonusPage() {
 
   return (
     <div className="space-y-12 pt-10">
-      <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="space-y-4">
+      <section className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
+        <div className="bg-hero-panel" aria-hidden="true" />
+        <div className="relative grid gap-8 px-4 pb-8 pt-10 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="space-y-4">
           <p className="text-sm font-semibold text-teal-700">キャンペーン解説</p>
           <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
             2026年2月6日から初回入金50%ボーナス
@@ -36,17 +38,19 @@ export default function BonusPage() {
           >
             公式で条件を確認する
           </a>
+          </div>
+          <MediaSlot
+            src="/partner/bonus-banner.webp"
+            alt="ババオプション ボーナス案内イメージ"
+            width={920}
+            height={700}
+            objectPosition="right center"
+            label="/public/partner/bonus-banner.webp"
+          />
         </div>
-        <MediaSlot
-          src="/partner/bonus-banner.webp"
-          alt="ババオプション ボーナス案内イメージ"
-          width={920}
-          height={700}
-          label="/public/partner/bonus-banner.webp"
-        />
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <h2 className="section-title">注意しておきたい点</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <div className="card">
@@ -73,7 +77,7 @@ export default function BonusPage() {
         </p>
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <div className="card border-amber-200 bg-amber-50/70">
           <h2 className="font-display text-xl text-black">最新条件は公式で確認</h2>
           <p className="mt-2 text-sm text-black/70">
@@ -90,7 +94,7 @@ export default function BonusPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <div className="grid gap-6 md:grid-cols-[0.95fr_1.05fr]">
           <div className="card overflow-hidden p-0">
             <Image
@@ -106,6 +110,48 @@ export default function BonusPage() {
             <h2 className="section-title">決済まわりも見ておくと安心</h2>
             <p className="text-sm text-black/70">
               入出金まわりは実際に使ってみないと分からない点があるので、公式の案内も合わせてチェックしておくと安心です。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
+        <div className="grid gap-6 md:grid-cols-[1.05fr_0.95fr]">
+          <div className="space-y-3">
+            <p className="text-sm font-semibold text-teal-700">プロモーション画面</p>
+            <h2 className="section-title">ボーナス関連の見え方</h2>
+            <p className="text-sm text-black/70">
+              実際の表示は時期や地域で変わる可能性があります。最新の表示は公式でご確認ください。
+            </p>
+          </div>
+          <div className="card overflow-hidden p-0">
+            <Image
+              src="/partner/ui-bonus.webp"
+              alt="ボーナス画面イメージ"
+              width={1280}
+              height={720}
+              className="h-56 w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
+        <div className="grid gap-6 md:grid-cols-[0.95fr_1.05fr]">
+          <div className="card overflow-hidden p-0">
+            <Image
+              src="/partner/ui-bonus-table.webp"
+              alt="ボーナス条件の表イメージ"
+              width={1280}
+              height={720}
+              className="h-56 w-full object-cover"
+            />
+          </div>
+          <div className="space-y-3">
+            <p className="text-sm font-semibold text-teal-700">条件の早見</p>
+            <h2 className="section-title">数値は公式で必ず確認</h2>
+            <p className="text-sm text-black/70">
+              表に出ている数値は変更される場合があります。最新の条件は公式ページでご確認ください。
             </p>
           </div>
         </div>

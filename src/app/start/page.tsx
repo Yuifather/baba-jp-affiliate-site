@@ -57,9 +57,14 @@ const startGallery = [
     src: "/partner/ui-options.webp",
   },
   {
-    title: "デモの雰囲気",
-    note: "本番に近い画面で試せるのが便利。",
-    src: "/partner/ui-multicurrency.webp",
+    title: "取引画面の流れ",
+    note: "履歴や詳細がまとまっていて見やすい。",
+    src: "/partner/ui-history.webp",
+  },
+  {
+    title: "チャートの比較",
+    note: "複数チャートで全体感を掴みやすい。",
+    src: "/partner/ui-multichart.webp",
   },
 ];
 
@@ -68,8 +73,10 @@ export default function StartPage() {
 
   return (
     <div className="space-y-12 pt-10">
-      <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="space-y-4">
+      <section className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
+        <div className="bg-hero-panel" aria-hidden="true" />
+        <div className="relative grid gap-8 px-4 pb-8 pt-10 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-4">
           <p className="text-sm font-semibold text-teal-700">ステップバイステップ</p>
           <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
             登録から初回取引までの流れ
@@ -90,17 +97,19 @@ export default function StartPage() {
               リスクを先に確認
             </Link>
           </div>
+          </div>
+          <MediaSlot
+            src="/partner/start-banner.webp"
+            alt="ババオプション はじめ方イメージ"
+            width={920}
+            height={700}
+            objectPosition="right center"
+            label="/public/partner/start-banner.webp"
+          />
         </div>
-        <MediaSlot
-          src="/partner/start-banner.webp"
-          alt="ババオプション はじめ方イメージ"
-          width={920}
-          height={700}
-          label="/public/partner/start-banner.webp"
-        />
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <h2 className="section-title">具体的な手順</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {steps.map((step) => (
@@ -120,7 +129,7 @@ export default function StartPage() {
         </p>
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-sm font-semibold text-teal-700">画面イメージ</p>
@@ -128,7 +137,7 @@ export default function StartPage() {
           </div>
           <p className="text-sm text-black/60">画面は変更される場合があります。</p>
         </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
           {startGallery.map((item) => (
             <div key={item.title} className="card overflow-hidden p-0">
               <Image
@@ -136,7 +145,7 @@ export default function StartPage() {
                 alt={item.title}
                 width={1152}
                 height={864}
-                className="h-48 w-full object-cover"
+                className="h-44 w-full object-cover"
               />
               <div className="p-4">
                 <p className="text-sm font-semibold text-black">{item.title}</p>
@@ -147,7 +156,7 @@ export default function StartPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <h2 className="section-title">リスク管理チェックリスト（一般論）</h2>
         <div className="mt-4 grid gap-3">
           {checklist.map((item) => (

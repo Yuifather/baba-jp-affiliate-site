@@ -22,16 +22,33 @@ html {
 
 body {
   background-color: var(--background);
-  background-image: url("/images/bg-grid.svg"),
-    radial-gradient(1200px circle at 12% -10%, #fff2cc 0%, transparent 60%),
-    radial-gradient(900px circle at 90% -20%, #d9f3ff 0%, transparent 55%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, transparent 40%);
+  background-image:
+    url("/images/bg-grid.svg"),
+    radial-gradient(1200px circle at 12% -10%, rgba(255, 242, 204, 0.9) 0%, transparent 60%),
+    radial-gradient(900px circle at 90% -20%, rgba(217, 243, 255, 0.8) 0%, transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, transparent 40%);
   background-size: 140px 140px, 1200px 1200px, 900px 900px, 100% 100%;
   background-repeat: repeat, no-repeat, no-repeat, no-repeat;
   background-position: top left, 12% -10%, 90% -20%, top;
   background-blend-mode: multiply, normal, normal, normal;
   color: var(--foreground);
   font-family: var(--font-noto), "Noto Sans JP", sans-serif;
+}
+
+.bg-hero-panel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    radial-gradient(600px circle at 15% 20%, rgba(15, 118, 110, 0.14) 0%, transparent 60%),
+    radial-gradient(520px circle at 80% 0%, rgba(245, 158, 11, 0.2) 0%, transparent 55%),
+    linear-gradient(130deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.65) 45%, transparent 80%);
+  pointer-events: none;
+}
+
+.bg-grid-soft {
+  background-image: url("/images/bg-grid.svg");
+  background-size: 140px 140px;
 }
 
 .font-display {

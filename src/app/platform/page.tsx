@@ -36,8 +36,10 @@ export default function PlatformPage() {
 
   return (
     <div className="space-y-12 pt-10">
-      <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="space-y-4">
+      <section className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
+        <div className="bg-hero-panel" aria-hidden="true" />
+        <div className="relative grid gap-8 px-4 pb-8 pt-10 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="space-y-4">
           <p className="text-sm font-semibold text-teal-700">利用環境</p>
           <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
             どのデバイスでも迷わない
@@ -53,17 +55,19 @@ export default function PlatformPage() {
           >
             公式のプラットフォームを見る
           </a>
+          </div>
+          <MediaSlot
+            src="/partner/platform-banner.webp"
+            alt="ババオプション プラットフォームイメージ"
+            width={920}
+            height={700}
+            objectPosition="right center"
+            label="/public/partner/platform-banner.webp"
+          />
         </div>
-        <MediaSlot
-          src="/partner/platform-banner.webp"
-          alt="ババオプション プラットフォームイメージ"
-          width={920}
-          height={700}
-          label="/public/partner/platform-banner.webp"
-        />
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <h2 className="section-title">代表的な利用シーン</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {platforms.map((platform) => (
@@ -87,7 +91,7 @@ export default function PlatformPage() {
         </p>
       </section>
 
-      <section className="section">
+      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
         <div className="card border-teal-700/20">
           <h2 className="font-display text-xl text-black">まずは公式で環境をチェック</h2>
           <p className="mt-2 text-sm text-black/70">
