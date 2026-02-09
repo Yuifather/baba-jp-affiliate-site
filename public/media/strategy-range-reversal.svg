@@ -1,0 +1,55 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071629"/>
+      <stop offset="1" stop-color="#142846"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="70" y="60" width="1460" height="780" rx="28" fill="#0D1B35" stroke="#284466"/>
+
+  <g opacity="0.25" stroke="#35547E" stroke-width="1">
+    <path d="M70 190H1530"/>
+    <path d="M70 320H1530"/>
+    <path d="M70 450H1530"/>
+    <path d="M70 580H1530"/>
+    <path d="M70 710H1530"/>
+    <path d="M320 60V840"/>
+    <path d="M610 60V840"/>
+    <path d="M900 60V840"/>
+    <path d="M1190 60V840"/>
+  </g>
+
+  <rect x="220" y="230" width="1160" height="430" rx="22" fill="#0C1A32" stroke="#37557E" stroke-width="3"/>
+  <path d="M220 290H1380" stroke="#EF4444" stroke-dasharray="16 14" stroke-width="5"/>
+  <path d="M220 600H1380" stroke="#22C55E" stroke-dasharray="16 14" stroke-width="5"/>
+
+  <path d="M250 560L320 510L380 520L450 450L520 430L600 470L680 550L760 580L830 540L910 470L980 410L1050 430L1120 500L1210 560L1300 590L1360 560" stroke="#60A5FA" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <circle cx="450" cy="450" r="11" fill="#F59E0B"/>
+  <circle cx="910" cy="470" r="11" fill="#F59E0B"/>
+  <circle cx="1300" cy="590" r="11" fill="#F59E0B"/>
+
+  <path d="M450 360V420" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M450 360L438 377" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M450 360L462 377" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M1300 520V575" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1300 575L1288 558" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1300 575L1312 558" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+
+  <rect x="120" y="98" width="340" height="118" rx="18" fill="#15294E" stroke="#2A4678"/>
+  <text x="148" y="152" fill="#E8F0FF" font-family="'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700">Range Reversal</text>
+  <text x="148" y="188" fill="#9CB6E1" font-family="'Segoe UI', Arial, sans-serif" font-size="22">Sell high / Buy low with confirmation</text>
+
+  <rect x="1110" y="90" width="320" height="110" rx="16" fill="#102033" stroke="#29466B"/>
+  <text x="1138" y="152" fill="#D5E5FF" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700">Range Box Active</text>
+</svg>

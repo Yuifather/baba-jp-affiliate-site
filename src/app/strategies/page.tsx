@@ -24,19 +24,19 @@ const strategies = [
   {
     title: "トレンド押し目戦略",
     href: "/strategies/trend-pullback",
-    image: "/media/case-trend-pullback.jpg",
+    image: "/media/strategy-trend-pullback.svg",
     desc: "方向性が出たあと、押し目/戻りを待って同方向に入る。",
   },
   {
     title: "レンジ逆張り戦略",
     href: "/strategies/range-reversal",
-    image: "/media/case-timer-focus.jpg",
+    image: "/media/strategy-range-reversal.svg",
     desc: "高値帯と安値帯で反発確認後に短期判定を合わせる。",
   },
   {
     title: "ブレイク確認戦略",
     href: "/strategies/breakout-filter",
-    image: "/media/case-btc-window.jpg",
+    image: "/media/strategy-breakout-filter.svg",
     desc: "水平ラインを抜けた後の確定足を待ってから入る。",
   },
 ];

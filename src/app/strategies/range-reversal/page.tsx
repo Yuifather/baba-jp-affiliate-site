@@ -35,7 +35,7 @@ export default function RangeReversalPage() {
 
       <section className="overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
         <Image
-          src="/media/case-timer-focus.jpg"
+          src="/media/strategy-range-reversal.svg"
           alt="レンジ逆張りで使う判定時間の画面"
           width={1280}
           height={720}

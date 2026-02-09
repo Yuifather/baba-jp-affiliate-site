@@ -40,19 +40,19 @@ const strategyCards = [
     title: "トレンド押し目戦略",
     description: "方向性が出た後の押し目/戻りを狙う基本戦略。",
     href: "/strategies/trend-pullback",
-    image: "/media/case-trend-pullback.jpg",
+    image: "/media/strategy-trend-pullback.svg",
   },
   {
     title: "レンジ逆張り戦略",
     description: "高値圏・安値圏の反発を判定時間と合わせて使う戦略。",
     href: "/strategies/range-reversal",
-    image: "/media/case-timer-focus.jpg",
+    image: "/media/strategy-range-reversal.svg",
   },
   {
     title: "ブレイク確認戦略",
     description: "フェイクを避けるためにローソク確定を待つ戦略。",
     href: "/strategies/breakout-filter",
-    image: "/media/case-btc-window.jpg",
+    image: "/media/strategy-breakout-filter.svg",
   },
 ];
 

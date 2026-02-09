@@ -35,7 +35,7 @@ export default function BreakoutFilterPage() {
 
       <section className="overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
         <Image
-          src="/media/case-btc-window.jpg"
+          src="/media/strategy-breakout-filter.svg"
           alt="ブレイク確認戦略のチャート例"
           width={1280}
           height={720}

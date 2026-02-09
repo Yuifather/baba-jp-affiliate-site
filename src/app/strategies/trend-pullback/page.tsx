@@ -39,7 +39,7 @@ export default function TrendPullbackPage() {
 
       <section className="overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
         <Image
-          src="/media/case-trend-pullback.jpg"
+          src="/media/strategy-trend-pullback.svg"
           alt="トレンド押し目戦略のチャート例"
           width={1280}
           height={720}

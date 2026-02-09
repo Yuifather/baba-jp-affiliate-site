@@ -1,0 +1,52 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081428"/>
+      <stop offset="1" stop-color="#122445"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#36CFC9"/>
+      <stop offset="1" stop-color="#4F7BFF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="80" y="70" width="1440" height="760" rx="30" fill="#0F1D38" stroke="#27385C"/>
+
+  <g opacity="0.25" stroke="#38517D" stroke-width="1">
+    <path d="M80 220H1520"/>
+    <path d="M80 360H1520"/>
+    <path d="M80 500H1520"/>
+    <path d="M80 640H1520"/>
+    <path d="M340 70V830"/>
+    <path d="M640 70V830"/>
+    <path d="M940 70V830"/>
+    <path d="M1240 70V830"/>
+  </g>
+
+  <path d="M150 640C240 620 290 590 350 520C410 450 470 410 560 430C650 450 710 370 760 320C810 270 860 310 910 400C960 490 1010 540 1060 470C1110 400 1170 300 1250 250C1330 200 1400 170 1460 120" stroke="#16A34A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+
+  <path d="M150 670L270 625L390 560L490 500L590 455L700 430L810 470L900 560L980 520L1060 440L1140 380L1240 300L1350 210L1460 150" stroke="url(#line)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <circle cx="900" cy="560" r="12" fill="#F59E0B"/>
+  <circle cx="900" cy="560" r="30" fill="#F59E0B" fill-opacity="0.22"/>
+
+  <path d="M835 470L892 545" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M890 545L878 528" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M890 545L907 533" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+
+  <rect x="120" y="100" width="360" height="120" rx="18" fill="#15294E" stroke="#2A4678"/>
+  <text x="148" y="156" fill="#E8F0FF" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700">Trend Pullback</text>
+  <text x="148" y="192" fill="#9BB4DF" font-family="'Segoe UI', Arial, sans-serif" font-size="22">Wait for pullback, enter with trend</text>
+
+  <rect x="1110" y="650" width="330" height="130" rx="18" fill="#102033" stroke="#284569"/>
+  <text x="1140" y="705" fill="#D2E3FF" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700">Risk:Reward 1:1+</text>
+  <text x="1140" y="742" fill="#8CB0E8" font-family="'Segoe UI', Arial, sans-serif" font-size="22">Pullback zone confirmed</text>
+</svg>
