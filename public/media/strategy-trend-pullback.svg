@@ -32,21 +32,24 @@
   </g>
 
   <path d="M150 640C240 620 290 590 350 520C410 450 470 410 560 430C650 450 710 370 760 320C810 270 860 310 910 400C960 490 1010 540 1060 470C1110 400 1170 300 1250 250C1330 200 1400 170 1460 120" stroke="#16A34A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
-
   <path d="M150 670L270 625L390 560L490 500L590 455L700 430L810 470L900 560L980 520L1060 440L1140 380L1240 300L1350 210L1460 150" stroke="url(#line)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
 
-  <circle cx="900" cy="560" r="12" fill="#F59E0B"/>
-  <circle cx="900" cy="560" r="30" fill="#F59E0B" fill-opacity="0.22"/>
+  <rect x="820" y="500" width="220" height="120" rx="14" fill="#10233F" stroke="#2F537F"/>
+  <text x="846" y="545" fill="#DFF0FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="28" font-weight="700">押し目ゾーン</text>
+  <text x="846" y="580" fill="#A8C4EE" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="22">反転足を待つ</text>
 
-  <path d="M835 470L892 545" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M890 545L878 528" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M890 545L907 533" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="600" cy="450" r="22" fill="#1D4ED8"/><text x="592" y="458" fill="#FFFFFF" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">1</text>
+  <circle cx="900" cy="560" r="22" fill="#F59E0B"/><text x="892" y="568" fill="#111827" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">2</text>
+  <circle cx="1080" cy="425" r="22" fill="#22C55E"/><text x="1072" y="433" fill="#06240E" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">3</text>
 
-  <rect x="120" y="100" width="360" height="120" rx="18" fill="#15294E" stroke="#2A4678"/>
-  <text x="148" y="156" fill="#E8F0FF" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700">Trend Pullback</text>
-  <text x="148" y="192" fill="#9BB4DF" font-family="'Segoe UI', Arial, sans-serif" font-size="22">Wait for pullback, enter with trend</text>
+  <rect x="500" y="685" width="470" height="90" rx="14" fill="#10233D" stroke="#2D4F7B"/>
+  <text x="530" y="740" fill="#D9EBFF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="27">①トレンド確認 → ②押し目待ち → ③順張りエントリー</text>
 
-  <rect x="1110" y="650" width="330" height="130" rx="18" fill="#102033" stroke="#284569"/>
-  <text x="1140" y="705" fill="#D2E3FF" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700">Risk:Reward 1:1+</text>
-  <text x="1140" y="742" fill="#8CB0E8" font-family="'Segoe UI', Arial, sans-serif" font-size="22">Pullback zone confirmed</text>
+  <rect x="120" y="100" width="420" height="124" rx="18" fill="#15294E" stroke="#2A4678"/>
+  <text x="148" y="156" fill="#E8F0FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="46" font-weight="700">トレンド押し目戦略</text>
+  <text x="148" y="194" fill="#9BB4DF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="24">上昇トレンドで押し目を待って順張り</text>
+
+  <rect x="1080" y="650" width="360" height="130" rx="18" fill="#102033" stroke="#284569"/>
+  <text x="1112" y="705" fill="#D2E3FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="30" font-weight="700">損益比率 1:1 以上</text>
+  <text x="1112" y="742" fill="#8CB0E8" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="22">根拠が崩れたら即撤退</text>
 </svg>

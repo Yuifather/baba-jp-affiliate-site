@@ -11,8 +11,8 @@
   </defs>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <text x="120" y="130" fill="#EAF1FF" font-family="'Segoe UI', Arial, sans-serif" font-size="54" font-weight="700">Range Monitor Board</text>
-  <text x="120" y="168" fill="#A8BDE4" font-family="'Segoe UI', Arial, sans-serif" font-size="26">Multiple pairs + same rules + same expiry window</text>
+  <text x="120" y="130" fill="#EAF1FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="54" font-weight="700">レンジ監視ボード</text>
+  <text x="120" y="168" fill="#A8BDE4" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="26">複数通貨を同条件・同判定時間で同時監視</text>
 
   <g>
     <rect x="90" y="220" width="450" height="280" rx="20" fill="#10213D" stroke="#294A74"/>
@@ -21,6 +21,15 @@
     <rect x="90" y="530" width="450" height="280" rx="20" fill="#10213D" stroke="#294A74"/>
     <rect x="575" y="530" width="450" height="280" rx="20" fill="#10213D" stroke="#294A74"/>
     <rect x="1060" y="530" width="450" height="280" rx="20" fill="#10213D" stroke="#294A74"/>
+  </g>
+
+  <g fill="#DDEBFF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="22" font-weight="700">
+    <text x="120" y="255">EUR/JPY</text>
+    <text x="605" y="255">GBP/JPY</text>
+    <text x="1090" y="255">USD/JPY</text>
+    <text x="120" y="565">AUD/JPY</text>
+    <text x="605" y="565">CAD/JPY</text>
+    <text x="1090" y="565">EUR/CHF</text>
   </g>
 
   <g opacity="0.35" stroke="#45638F" stroke-width="1">
@@ -32,7 +41,7 @@
     <path d="M1080 610H1490"/><path d="M1080 690H1490"/><path d="M1080 770H1490"/>
   </g>
 
-  <g stroke="#F59E0B" stroke-width="4" stroke-dasharray="10 10" opacity="0.75">
+  <g stroke="#F59E0B" stroke-width="4" stroke-dasharray="10 10" opacity="0.8">
     <path d="M115 260H515"/><path d="M115 470H515"/>
     <path d="M600 260H1000"/><path d="M600 470H1000"/>
     <path d="M1085 260H1485"/><path d="M1085 470H1485"/>
@@ -50,6 +59,6 @@
     <path d="M1090 740L1150 700L1210 670L1270 710L1330 750L1400 710L1470 690"/>
   </g>
 
-  <rect x="1220" y="98" width="280" height="84" rx="14" fill="#122646" stroke="#2F5385"/>
-  <text x="1250" y="150" fill="#D7E7FF" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700">Range x 6 pairs</text>
+  <rect x="1040" y="94" width="470" height="94" rx="14" fill="#122646" stroke="#2F5385"/>
+  <text x="1072" y="151" fill="#D7E7FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="30" font-weight="700">同条件で6通貨を比較監視</text>
 </svg>

@@ -14,8 +14,8 @@
   <rect x="120" y="120" width="860" height="660" rx="28" fill="#10213D" stroke="#2A4973"/>
   <rect x="1010" y="120" width="470" height="660" rx="28" fill="#0F2038" stroke="#2B4A74"/>
 
-  <text x="150" y="185" fill="#EAF1FF" font-family="'Segoe UI', Arial, sans-serif" font-size="46" font-weight="700">Breakout Confirmation Panel</text>
-  <text x="150" y="220" fill="#A9C1E9" font-family="'Segoe UI', Arial, sans-serif" font-size="24">1) Break line  2) Candle close  3) Follow-through</text>
+  <text x="150" y="185" fill="#EAF1FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="46" font-weight="700">ブレイク確認パネル</text>
+  <text x="150" y="220" fill="#A9C1E9" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="24">①ライン突破 ②確定足 ③追随エントリー</text>
 
   <g opacity="0.3" stroke="#44638F" stroke-width="1">
     <path d="M150 320H950"/><path d="M150 430H950"/><path d="M150 540H950"/><path d="M150 650H950"/>
@@ -24,22 +24,24 @@
 
   <path d="M170 640L260 620L340 650L420 560L500 540L580 590L670 520L760 500L850 420L930 300" stroke="url(#lineB)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M170 585H760" stroke="#F59E0B" stroke-width="5" stroke-dasharray="12 10"/>
-  <path d="M760 585L760 500" stroke="#22C55E" stroke-width="6"/>
-  <path d="M760 500L744 516" stroke="#22C55E" stroke-width="6" stroke-linecap="round"/>
-  <path d="M760 500L777 515" stroke="#22C55E" stroke-width="6" stroke-linecap="round"/>
+  <text x="600" y="570" fill="#FCD34D" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="22" font-weight="700">抵抗ライン</text>
+
+  <circle cx="760" cy="500" r="22" fill="#22C55E"/><text x="752" y="508" fill="#05270E" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">2</text>
+  <circle cx="850" cy="420" r="22" fill="#22C55E"/><text x="842" y="428" fill="#05270E" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">3</text>
+  <circle cx="670" cy="520" r="22" fill="#F59E0B"/><text x="662" y="528" fill="#111827" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">1</text>
 
   <rect x="1050" y="180" width="390" height="120" rx="16" fill="#132948" stroke="#325687"/>
-  <text x="1085" y="235" fill="#E8F0FF" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700">Checklist</text>
-  <text x="1085" y="275" fill="#9FC0EA" font-family="'Segoe UI', Arial, sans-serif" font-size="24">Break, close, no chase</text>
+  <text x="1085" y="235" fill="#E8F0FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="30" font-weight="700">チェック項目</text>
+  <text x="1085" y="275" fill="#9FC0EA" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="24">突破・確定・追随</text>
 
   <rect x="1050" y="340" width="390" height="180" rx="16" fill="#122643" stroke="#315580"/>
-  <text x="1085" y="395" fill="#DDF0FF" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="700">Risk Control</text>
-  <text x="1085" y="438" fill="#9FC0EA" font-family="'Segoe UI', Arial, sans-serif" font-size="22">- Fixed expiry window</text>
-  <text x="1085" y="470" fill="#9FC0EA" font-family="'Segoe UI', Arial, sans-serif" font-size="22">- No re-entry impulse</text>
-  <text x="1085" y="502" fill="#9FC0EA" font-family="'Segoe UI', Arial, sans-serif" font-size="22">- Pause after losses</text>
+  <text x="1085" y="395" fill="#DDF0FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="28" font-weight="700">リスク管理</text>
+  <text x="1085" y="438" fill="#9FC0EA" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="22">- 判定時間を固定</text>
+  <text x="1085" y="470" fill="#9FC0EA" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="22">- 連続エントリー回避</text>
+  <text x="1085" y="502" fill="#9FC0EA" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="22">- 連敗後は必ず停止</text>
 
   <rect x="1050" y="560" width="390" height="180" rx="16" fill="#10233D" stroke="#2D4E78"/>
-  <text x="1085" y="615" fill="#DFF0FF" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="700">Execution Note</text>
-  <text x="1085" y="658" fill="#A5C4EA" font-family="'Segoe UI', Arial, sans-serif" font-size="22">Wait for one more bar</text>
-  <text x="1085" y="690" fill="#A5C4EA" font-family="'Segoe UI', Arial, sans-serif" font-size="22">if volatility spikes.</text>
+  <text x="1085" y="615" fill="#DFF0FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="28" font-weight="700">実行メモ</text>
+  <text x="1085" y="658" fill="#A5C4EA" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="22">急変時は1本待って確認</text>
+  <text x="1085" y="690" fill="#A5C4EA" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="22">根拠が弱ければ見送り</text>
 </svg>

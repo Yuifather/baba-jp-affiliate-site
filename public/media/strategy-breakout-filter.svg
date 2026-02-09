@@ -10,10 +10,7 @@
     </linearGradient>
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
@@ -21,34 +18,26 @@
   <rect x="70" y="70" width="1460" height="760" rx="30" fill="#0F1D38" stroke="#2A4670"/>
 
   <g opacity="0.22" stroke="#37537E" stroke-width="1">
-    <path d="M70 210H1530"/>
-    <path d="M70 350H1530"/>
-    <path d="M70 490H1530"/>
-    <path d="M70 630H1530"/>
-    <path d="M330 70V830"/>
-    <path d="M620 70V830"/>
-    <path d="M910 70V830"/>
-    <path d="M1200 70V830"/>
+    <path d="M70 210H1530"/><path d="M70 350H1530"/><path d="M70 490H1530"/><path d="M70 630H1530"/>
+    <path d="M330 70V830"/><path d="M620 70V830"/><path d="M910 70V830"/><path d="M1200 70V830"/>
   </g>
 
   <path d="M180 540H1080" stroke="#F59E0B" stroke-width="6" stroke-dasharray="14 12"/>
+  <text x="910" y="525" fill="#FCD34D" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="24" font-weight="700">抵抗ライン</text>
   <rect x="180" y="460" width="900" height="160" rx="18" fill="#0D203A" fill-opacity="0.55" stroke="#27486E"/>
 
   <path d="M220 580L300 560L380 570L460 540L540 550L620 530L700 545L780 525L860 535L940 520L1020 530" stroke="#7DD3FC" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M1020 530L1100 490L1180 400L1260 300L1340 220L1450 160" stroke="url(#break)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
 
-  <circle cx="1100" cy="490" r="12" fill="#22C55E"/>
-  <circle cx="1180" cy="400" r="12" fill="#22C55E"/>
+  <circle cx="1020" cy="530" r="22" fill="#F59E0B"/><text x="1012" y="538" fill="#111827" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">1</text>
+  <circle cx="1100" cy="490" r="22" fill="#22C55E"/><text x="1092" y="498" fill="#06240E" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">2</text>
+  <circle cx="1180" cy="400" r="22" fill="#22C55E"/><text x="1172" y="408" fill="#06240E" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">3</text>
 
-  <path d="M1098 440L1158 385" stroke="#22C55E" stroke-width="6" stroke-linecap="round"/>
-  <path d="M1158 385L1140 384" stroke="#22C55E" stroke-width="6" stroke-linecap="round"/>
-  <path d="M1158 385L1157 404" stroke="#22C55E" stroke-width="6" stroke-linecap="round"/>
+  <rect x="860" y="640" width="590" height="130" rx="18" fill="#102033" stroke="#284569"/>
+  <text x="892" y="697" fill="#D5E4FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="30" font-weight="700">①突破を確認 → ②確定足待ち → ③追随エントリー</text>
+  <text x="892" y="736" fill="#9DBFEB" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="23">先回り禁止 / ダマシ軽減</text>
 
-  <rect x="116" y="100" width="380" height="122" rx="18" fill="#15294E" stroke="#2A4678"/>
-  <text x="146" y="156" fill="#EAF1FF" font-family="'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700">Breakout Filter</text>
-  <text x="146" y="193" fill="#9CB6E1" font-family="'Segoe UI', Arial, sans-serif" font-size="22">Wait candle close, then follow</text>
-
-  <rect x="1090" y="650" width="340" height="132" rx="18" fill="#102033" stroke="#284569"/>
-  <text x="1120" y="704" fill="#D5E4FF" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700">False break reduced</text>
-  <text x="1120" y="742" fill="#8CB0E8" font-family="'Segoe UI', Arial, sans-serif" font-size="22">Entry after confirmation</text>
+  <rect x="116" y="100" width="430" height="122" rx="18" fill="#15294E" stroke="#2A4678"/>
+  <text x="146" y="156" fill="#EAF1FF" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="44" font-weight="700">ブレイク確認戦略</text>
+  <text x="146" y="193" fill="#9CB6E1" font-family="'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="24">ライン突破後の確定足を待って追随</text>
 </svg>
