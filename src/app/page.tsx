@@ -2,17 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import AffiliateCta from "@/components/AffiliateCta";
-import FaqAccordion from "@/components/FaqAccordion";
-import MediaSlot from "@/components/MediaSlot";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
-import { getOfficialUrl, officialResources } from "@/lib/site";
 import { getLastUpdatedLabel } from "@/lib/seo";
+import { getOfficialUrl, officialResources } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "ババオプションの使い方ガイド",
+  title: "ホーム",
   description:
-    "ババオプション（バイナリーオプション）の使い方・始め方・口座開設・デモ・入金/出金・リスクを日本語で整理。公式条件の確認から始められます。",
+    "ババオプションの実践向けガイド。海外バイナリーオプション業者の比較観点、口座開設、出金、戦略、評判確認の手順を分析的に整理。",
   keywords: [
     "海外バイナリーオプション業者",
     "ハイローオプション",
@@ -25,424 +23,196 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "ババオプションの使い方ガイド",
+    title: "バイナリー戦略ラボJP",
     description:
-      "ババオプション（バイナリーオプション）の使い方・始め方・口座開設・デモ・入金/出金・リスクを日本語で整理。公式条件の確認から始められます。",
+      "ババオプションの実践向けガイド。海外バイナリーオプション業者の比較観点、口座開設、出金、戦略、評判確認の手順を分析的に整理。",
     url: "/",
   },
   twitter: {
-    title: "ババオプションの使い方ガイド",
+    title: "バイナリー戦略ラボJP",
     description:
-      "ババオプション（バイナリーオプション）の使い方・始め方・口座開設・デモ・入金/出金・リスクを日本語で整理。公式条件の確認から始められます。",
+      "ババオプションの実践向けガイド。海外バイナリーオプション業者の比較観点、口座開設、出金、戦略、評判確認の手順を分析的に整理。",
   },
 };
 
-const featureCards = [
+const strategyCards = [
   {
-    title: "$1から試せる設計",
-    description: "少額で始めたい人向けの取引設計（公式記載ベース）。",
+    title: "トレンド押し目戦略",
+    description: "方向性が出た後の押し目/戻りを狙う基本戦略。",
+    href: "/strategies/trend-pullback",
+    image: "/media/case-trend-pullback.jpg",
   },
   {
-    title: "デモ$10,000",
-    description: "デモ口座で取引画面の操作を確認できます。",
+    title: "レンジ逆張り戦略",
+    description: "高値圏・安値圏の反発を判定時間と合わせて使う戦略。",
+    href: "/strategies/range-reversal",
+    image: "/media/case-timer-focus.jpg",
   },
   {
-    title: "最大888%ペイアウト設計",
-    description: "商品・条件により変動。最新条件は公式で要確認。",
-  },
-  {
-    title: "70+の取引資産",
-    description: "通貨ペア/株価指数/コモディティなどを選べます。",
-  },
-  {
-    title: "最短5秒から満期設定",
-    description: "短期取引の選択肢あり。判断は慎重に。",
-  },
-  {
-    title: "画面が直感的",
-    description: "取引画面が見やすく、操作に迷いにくい構成。",
+    title: "ブレイク確認戦略",
+    description: "フェイクを避けるためにローソク確定を待つ戦略。",
+    href: "/strategies/breakout-filter",
+    image: "/media/case-btc-window.jpg",
   },
 ];
 
-const bonusHighlight = {
-  title: "2026年2月6日から初回入金50%ボーナスの案内",
-  note: "開始日・条件は変更される場合があります。必ず公式でご確認ください。",
-};
-
-const steps = [
-  {
-    title: "アカウント作成",
-    description: "公式サイトから登録し、基本情報を入力します。",
-    icon: "/images/step-1.svg",
-  },
-  {
-    title: "メール認証・本人確認",
-    description: "安全のため、メール認証と本人確認（KYC）を進めます。",
-    icon: "/images/step-2.svg",
-  },
-  {
-    title: "デモ/入金 → 取引開始",
-    description: "デモで練習後、必要に応じて入金して取引を始めます。",
-    icon: "/images/step-3.svg",
-  },
+const comparePoints = [
+  "海外バイナリーオプション業者の比較では、口座開設の所要時間とKYC要件を先に確認する。",
+  "ハイローオプションを含む他サービス比較時は、判定時間・銘柄数・注文UIを同一条件で比べる。",
+  "バイナリーオプション おすすめ情報は、評判だけでなく出金ルールと公式サポート導線まで確認する。",
 ];
 
-const quickLinks = [
-  { label: "はじめ方", href: "/start" },
-  { label: "ボーナス", href: "/bonus" },
-  { label: "プラットフォーム", href: "/platform" },
-  { label: "FAQ", href: "/faq" },
-  { label: "リスク/免責", href: "/risk" },
-  { label: "プライバシー", href: "/privacy" },
-  { label: "お問い合わせ", href: "/contact" },
-];
-
-const impressions = [
-  {
-    title: "使いやすい",
-    description: "画面が見やすく、操作が直感的で迷いにくいと感じました。",
-  },
-  {
-    title: "テンポが良い",
-    description: "短時間で試せるので、触っていて楽しいと感じました。",
-  },
-  {
-    title: "利益の可能性",
-    description: "相場が合えば利益が出る可能性はありますが、保証はありません。",
-  },
-];
-
-const uiGallery = [
-  {
-    title: "取引画面の雰囲気",
-    note: "画面はシンプル寄りで見やすい印象。",
-    src: "/partner/ui-history.webp",
-  },
-  {
-    title: "オプションタイプ",
-    note: "選択肢が多く、戦略の幅が広がります。",
-    src: "/partner/ui-options.webp",
-  },
-  {
-    title: "銘柄の一覧",
-    note: "一覧で見られると探しやすい。",
-    src: "/partner/ui-symbols.webp",
-  },
-  {
-    title: "マルチチャート",
-    note: "同時に複数の動きを確認しやすい。",
-    src: "/partner/ui-multichart.webp",
-  },
-];
-
-const faqItems = [
-  {
-    question: "公式サイトと何が違いますか？",
-    answer:
-      "当サイトは体験メモを含むガイドサイトです。最新の条件・規約・キャンペーンは必ず公式でご確認ください。",
-  },
-  {
-    question: "デモ口座はありますか？",
-    answer:
-      "公式記載では$10,000のデモが用意されています。内容は変更される場合があるため最新情報をご確認ください。",
-  },
-  {
-    question: "最低取引額はいくらですか？",
-    answer:
-      "公式記載では$1から取引できる設計とされています。条件は変更される場合があります。",
-  },
-  {
-    question: "ボーナスは出金できますか？",
-    answer:
-      "ボーナス自体は出金不可とされる場合があります。利益の出金や条件は公式でご確認ください。",
-  },
-  {
-    question: "スマホだけで利用できますか？",
-    answer:
-      "Web・アプリ・デスクトップなど複数の利用方法が用意されているとされています。",
-  },
-  {
-    question: "リスクはありますか？",
-    answer:
-      "バイナリーオプション取引には損失の可能性があります。余裕資金で、自己責任でご利用ください。",
-  },
+const facts = [
+  "公式記載ベースで最小取引額は$1から",
+  "デモ口座は$10,000相当の検証枠",
+  "取扱銘柄は70種類以上（時期により変動）",
+  "判定時間は最短5秒の設定が可能",
 ];
 
 export default function Home() {
   const officialUrl = getOfficialUrl();
 
   return (
-    <div>
-      <section className="section relative overflow-hidden rounded-3xl border border-black/10 bg-white/70 pt-10 shadow-sm">
+    <div className="space-y-12">
+      <section className="section relative overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
         <div className="bg-hero-panel" aria-hidden="true" />
-        <div className="relative grid items-center gap-10 px-4 pb-10 pt-6 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-6">
-            <span className="tag">バイナリーオプション 使い方メモ</span>
+        <div className="relative grid items-center gap-8 px-4 pb-8 pt-10 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="space-y-5">
+            <span className="tag">分析型バイナリーオプションガイド</span>
             <h1 className="font-display text-4xl font-semibold leading-tight text-black sm:text-5xl">
-              ババオプションの使い方・始め方
+              日本で実践するための
               <br />
-              口座開設から取引までを整理
+              バイナリーオプション戦略ノート
             </h1>
-            <p className="text-base text-black/70 sm:text-lg">
-              バイナリーオプションの始め方として、口座開設・デモ口座・入金/出金・取引の流れをまとめています。
-              相場が合えば利益が出る可能性はありますが、損失の可能性もあります。条件や仕様は変わることがあるため、
-              最新は公式で必ずご確認ください。
+            <p className="text-base text-black/70">
+              本サイトは、ババオプションの画面仕様と売買ルールを実務目線で整理した情報サイトです。
+              口座開設から出金確認までの導線を明示し、検証可能な条件のみ掲載します。
             </p>
-            <div className="flex flex-wrap items-center gap-3">
-              <a
-                className="btn-primary"
-                href={officialUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                公式サイトを見る
+            <div className="flex flex-wrap gap-3">
+              <a className="btn-primary" href={officialUrl} target="_blank" rel="noopener noreferrer">
+                公式サイトで仕様確認
               </a>
-              <Link className="btn-secondary" href="/start">
-                はじめ方を見る
+              <Link className="btn-secondary" href="/strategies">
+                戦略一覧を見る
               </Link>
-            </div>
-            <div className="rounded-2xl border border-amber-200 bg-amber-50/80 px-4 py-3 text-sm text-amber-900">
-              <p className="font-semibold">{bonusHighlight.title}</p>
-              <p className="mt-1 text-xs text-amber-900/80">{bonusHighlight.note}</p>
             </div>
             <p className="risk-text">
-              ※当サイトは体験メモを含む情報提供です。利益が出る可能性はありますが、損失の可能性もあります。
+              利益が出る可能性はありますが、損失も発生します。必ずリスク許容度に応じて判断してください。
             </p>
           </div>
-          <MediaSlot
-            src="/partner/hero-banner.webp"
-            alt="ババオプション ガイドイメージ"
-            width={960}
-            height={720}
-            objectPosition="right center"
-            label="/public/partner/hero-banner.webp"
-          />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="card">
-          <p className="text-sm font-semibold text-teal-700">クイックリンク</p>
-          <p className="mt-1 text-sm text-black/60">
-            はじめての方向けに、主要ページをまとめました。
-          </p>
-          <div className="mt-4 flex flex-wrap gap-3 text-sm text-black/70">
-            {quickLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="rounded-full border border-black/10 bg-white/70 px-3 py-1 hover:text-black"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="overflow-hidden rounded-3xl border border-black/10 bg-black/5 shadow-sm">
+            <Image
+              src="/media/hero-official.jpg"
+              alt="ババオプションの取引画面イメージ"
+              width={1280}
+              height={720}
+              className="h-full w-full object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="card space-y-4">
-          <p className="text-sm font-semibold text-teal-700">検索キーワードの確認ポイント</p>
-          <h2 className="section-title">比較前に押さえたい基準</h2>
-          <p className="text-sm text-black/70">
-            「海外バイナリーオプション業者」や「バイナリーオプション おすすめ」で探す場合は、
-            使いやすさだけでなく、口座開設の手順、出金条件、評判の確認方法をセットで見ると判断しやすくなります。
-          </p>
-          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border border-black/10 bg-white/80 p-4 text-sm text-black/70">
-              ハイローオプションなど他サービスと比較するときは、取引画面の見やすさと注文手順を先に確認。
-            </div>
-            <div className="rounded-2xl border border-black/10 bg-white/80 p-4 text-sm text-black/70">
-              口座開設は必要書類と本人確認の流れを事前確認。完了までの目安もチェック。
-            </div>
-            <div className="rounded-2xl border border-black/10 bg-white/80 p-4 text-sm text-black/70">
-              出金は手数料・反映時間・条件未達時の扱いを公式ヘルプで確認。
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="card">
-          <div className="flex flex-wrap items-end justify-between gap-2">
-            <div>
-              <p className="text-sm font-semibold text-teal-700">体験メモ</p>
-              <h2 className="section-title">使ってみた感想</h2>
-            </div>
-            <p className="text-sm text-black/60">個人の感想であり、結果を保証するものではありません。</p>
-          </div>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {impressions.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-black/10 bg-white/80 p-5">
-                <h3 className="font-display text-lg text-black">{item.title}</h3>
-                <p className="mt-2 text-sm text-black/70">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="flex flex-wrap items-end justify-between gap-4">
+      <section className="section rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
+        <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
-            <p className="text-sm font-semibold text-teal-700">画面イメージ</p>
-            <h2 className="section-title">雰囲気をざっくりチェック</h2>
+            <p className="text-sm font-semibold text-teal-700">公式記載ベース</p>
+            <h2 className="section-title">確認しておくべき数値</h2>
           </div>
-          <p className="text-sm text-black/60">実際の画面は公式で確認してください。</p>
-        </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {uiGallery.map((item) => (
-            <div key={item.title} className="card overflow-hidden p-0 bg-white/90">
-              <Image
-                src={item.src}
-                alt={item.title}
-                width={1152}
-                height={864}
-                className="h-44 w-full object-cover"
-              />
-              <div className="p-4">
-                <p className="text-sm font-semibold text-black">{item.title}</p>
-                <p className="mt-1 text-xs text-black/60">{item.note}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="card">
-          <p className="text-sm font-semibold text-teal-700">公式情報リンク</p>
-          <h2 className="section-title">最新情報の確認先</h2>
-          <p className="text-sm text-black/70">
-            評判や更新情報を追う場合は、公式X・YouTube・ヘルプセンター・公式ブログも合わせて確認してください。
-          </p>
-          <div className="mt-4 flex flex-wrap gap-3 text-sm">
-            {officialResources.map((resource) => (
-              <a
-                key={resource.href}
-                href={resource.href}
-                className="rounded-full border border-black/10 bg-white/70 px-3 py-1 text-black/70 hover:text-black"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {resource.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold text-teal-700">体験ベース + 公式記載</p>
-            <h2 className="section-title">押さえておきたいポイント</h2>
-          </div>
-          <p className="text-sm text-black/60">
-            数値や条件は変更される場合があります。最新は公式サイトでご確認ください。
-          </p>
-        </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {featureCards.map((feature) => (
-            <div key={feature.title} className="card">
-              <h3 className="font-display text-lg text-black">{feature.title}</h3>
-              <p className="mt-2 text-sm text-black/70">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-xs text-black/60">
-          数値や条件の出典は公式サイトをご確認ください。{" "}
-          <a
-            href={officialUrl}
-            className="font-semibold text-teal-700 hover:text-teal-900"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            公式サイトを見る
+          <a className="text-sm font-semibold text-teal-700" href={officialUrl} target="_blank" rel="noopener noreferrer">
+            公式ソースを見る →
           </a>
-        </p>
+        </div>
+        <div className="mt-5 grid gap-3 md:grid-cols-2">
+          {facts.map((fact) => (
+            <div key={fact} className="card p-4">
+              <p className="text-sm text-black/75">{fact}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="text-sm font-semibold text-teal-700">実践戦略</p>
+            <h2 className="section-title">3つの基礎戦略</h2>
+          </div>
+          <Link className="text-sm font-semibold text-teal-700" href="/strategies">
+            戦略一覧へ →
+          </Link>
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {strategyCards.map((card) => (
+            <article key={card.href} className="card overflow-hidden p-0">
+              <Image src={card.image} alt={card.title} width={1280} height={720} className="h-44 w-full object-cover" />
+              <div className="space-y-2 p-4">
+                <h3 className="font-display text-lg text-black">{card.title}</h3>
+                <p className="text-sm text-black/70">{card.description}</p>
+                <Link className="text-sm font-semibold text-teal-700" href={card.href}>
+                  詳細を見る →
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
+        <p className="text-sm font-semibold text-teal-700">比較の観点</p>
+        <h2 className="section-title mt-1">業者選定で見るポイント</h2>
+        <div className="mt-5 grid gap-3">
+          {comparePoints.map((point) => (
+            <div key={point} className="card p-4">
+              <p className="text-sm text-black/75">{point}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
+        <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+          <div className="space-y-3">
+            <p className="text-sm font-semibold text-teal-700">公式情報チャネル</p>
+            <h2 className="section-title">更新確認の動線</h2>
+            <p className="text-sm text-black/70">
+              仕様変更は公式サイト、運用情報はX/ブログ、操作不明点はヘルプセンターを確認するのが最短です。
+            </p>
+            <div className="flex flex-wrap gap-3 text-sm">
+              {officialResources.map((resource) => (
+                <a
+                  key={resource.href}
+                  href={resource.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-black/10 bg-white/70 px-3 py-1 text-black/70 hover:text-black"
+                >
+                  {resource.label}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-3xl border border-black/10 bg-black/5">
+            <Image
+              src="/media/case-platform-diagonal.jpg"
+              alt="プラットフォーム画面のクローズアップ"
+              width={1280}
+              height={720}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
       </section>
 
       <AffiliateCta />
 
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8" id="start">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold text-teal-700">はじめての方へ</p>
-            <h2 className="section-title">はじめての3ステップ</h2>
-          </div>
-          <Link className="text-sm font-semibold text-teal-700" href="/start">
-            さらに詳しく見る →
-          </Link>
-        </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
-          {steps.map((step) => (
-            <div key={step.title} className="card">
-              <div className="flex items-start gap-4">
-                <Image src={step.icon} alt="" width={48} height={48} className="h-12 w-12" />
-                <div>
-                  <h3 className="font-display text-lg text-black">{step.title}</h3>
-                  <p className="mt-2 text-sm text-black/70">{step.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <MediaSlot
-            src="/partner/bonus-banner.webp"
-            alt="ボーナス案内イメージ"
-            width={960}
-            height={720}
-            objectPosition="right center"
-            label="/public/partner/bonus-banner.webp"
-          />
-          <div className="space-y-4">
-            <p className="text-sm font-semibold text-teal-700">ボーナスの注意点</p>
-            <h2 className="section-title">初回入金50%ボーナスの案内</h2>
-            <p className="text-sm text-black/70">
-              現在案内されている主なキャンペーンは初回入金50%ボーナスです。条件は変わるため、必ず公式で確認してください。
-            </p>
-            <ul className="space-y-2 text-sm text-black/70">
-              <li>ボーナスは取引用の資金として付与される場合があります。</li>
-              <li>ボーナス自体は出金不可とされることがあります。</li>
-              <li>出金時に条件未達で消滅する、または比率が調整される場合があります。</li>
-            </ul>
-            <Link className="text-sm font-semibold text-teal-700" href="/bonus">
-              ボーナス詳細を読む →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold text-teal-700">よくある質問</p>
-            <h2 className="section-title">まずはここから</h2>
-          </div>
-          <Link className="text-sm font-semibold text-teal-700" href="/faq">
-            FAQ一覧へ →
-          </Link>
-        </div>
-        <div className="mt-6">
-          <FaqAccordion items={faqItems} />
-        </div>
-      </section>
-
-      <div className="section">
-        <AffiliateCta />
-      </div>
-
       <RelatedLinks
-        title="次に読む"
         items={[
-          { label: "はじめ方", href: "/start" },
+          { label: "戦略一覧", href: "/strategies" },
+          { label: "口座開設", href: "/start" },
           { label: "ボーナス", href: "/bonus" },
-          { label: "リスク/免責", href: "/risk" },
+          { label: "FAQ", href: "/faq" },
+          { label: "リスク", href: "/risk" },
         ]}
       />
 

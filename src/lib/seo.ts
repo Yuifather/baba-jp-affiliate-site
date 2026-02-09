@@ -3,12 +3,16 @@ import { join } from "path";
 
 const pageFileMap: Record<string, string> = {
   "/": "src/app/page.tsx",
+  "/strategies": "src/app/strategies/page.tsx",
+  "/strategies/trend-pullback": "src/app/strategies/trend-pullback/page.tsx",
+  "/strategies/range-reversal": "src/app/strategies/range-reversal/page.tsx",
+  "/strategies/breakout-filter": "src/app/strategies/breakout-filter/page.tsx",
   "/start": "src/app/start/page.tsx",
   "/bonus": "src/app/bonus/page.tsx",
   "/platform": "src/app/platform/page.tsx",
   "/faq": "src/app/faq/page.tsx",
   "/risk": "src/app/risk/page.tsx",
-  "/disclosure": "src/app/disclosure/page.tsx",
+  "/about": "src/app/about/page.tsx",
   "/privacy": "src/app/privacy/page.tsx",
   "/contact": "src/app/contact/page.tsx",
 };

@@ -6,8 +6,8 @@ export const contentType = ogContentType;
 
 export default function OpenGraphImage() {
   return renderOgImage({
-    title: "FAQ",
-    subtitle: "口座開設・出金・評判確認のよくある質問",
+    title: "運営方針",
+    subtitle: "運営目的・編集基準・更新方針",
     eyebrow: "バイナリー戦略ラボJP",
   });
 }

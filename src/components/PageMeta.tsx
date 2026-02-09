@@ -7,7 +7,7 @@ type PageMetaProps = {
 
 export default function PageMeta({
   lastUpdated,
-  editor = "ババオプション使い方ガイド 編集部",
+  editor = "バイナリー戦略ラボJP 編集部",
 }: PageMetaProps) {
   return (
     <section className="mt-10 rounded-2xl border border-black/10 bg-white/80 px-5 py-4 text-xs text-black/70">
@@ -19,8 +19,8 @@ export default function PageMeta({
         <Link className="hover:text-black" href="/risk">
           免責/リスク
         </Link>
-        <Link className="hover:text-black" href="/disclosure">
-          ご案内
+        <Link className="hover:text-black" href="/about">
+          運営方針
         </Link>
         <Link className="hover:text-black" href="/contact">
           お問い合わせ

@@ -28,18 +28,13 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "ババオプション",
-    "バイナリーオプション",
     "海外バイナリーオプション業者",
     "ハイローオプション",
     "バイナリーオプション おすすめ",
-    "使い方",
-    "始め方",
     "口座開設",
     "出金",
     "評判",
-    "デモ口座",
-    "入金ボーナス",
-    "プラットフォーム",
+    "バイナリーオプション",
   ],
   icons: {
     icon: "/favicon.ico",
@@ -110,7 +105,7 @@ export default function RootLayout({
               <div className="flex flex-wrap items-center gap-4">
                 <BrandMark />
                 <div className="space-y-1">
-                  <span className="tag">使い方メモ</span>
+                  <span className="tag">実践検証メモ</span>
                   <Link className="block font-display text-xl text-black" href="/">
                     {siteConfig.name}
                   </Link>
@@ -131,12 +126,13 @@ export default function RootLayout({
             <div className="mx-auto w-full max-w-6xl space-y-6 px-4 py-10 text-sm sm:px-6">
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="space-y-2 text-black/70">
-                  <p className="font-semibold text-black">ご案内</p>
-                  <p>当サイトは体験メモを含む情報提供サイトです。最新の条件は公式でご確認ください。</p>
+                  <p className="font-semibold text-black">サイト方針</p>
+                  <p>当サイトはババオプションの画面仕様と売買手順を整理した情報提供サイトです。</p>
+                  <p>公式条件と実際の取引条件が異なる場合は、必ず公式情報を優先してください。</p>
                 </div>
                 <div className="space-y-2 text-black/70">
                   <p className="font-semibold text-black">リスク警告 / 免責</p>
-                  <p>バイナリーオプション取引には損失の可能性があります。余裕資金で、自己責任で行ってください。</p>
+                  <p>バイナリーオプション取引には損失の可能性があります。余裕資金・自己責任でご利用ください。</p>
                   <p>本サイトの内容は情報提供であり、投資助言ではありません。</p>
                 </div>
               </div>

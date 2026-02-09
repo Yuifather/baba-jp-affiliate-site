@@ -6,8 +6,8 @@ export const contentType = ogContentType;
 
 export default function OpenGraphImage() {
   return renderOgImage({
-    title: "初回入金50%ボーナス",
-    subtitle: "入金ボーナスの条件・注意点を整理",
-    eyebrow: "ババオプション",
+    title: "入金ボーナス分析",
+    subtitle: "初回50%ボーナスの条件と確認手順",
+    eyebrow: "ババオプション公式情報",
   });
 }

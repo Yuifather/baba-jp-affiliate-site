@@ -1,173 +1,115 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import AffiliateCta from "@/components/AffiliateCta";
-import MediaSlot from "@/components/MediaSlot";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
-import { getOfficialUrl } from "@/lib/site";
 import { getLastUpdatedLabel } from "@/lib/seo";
+import { getOfficialUrl, getPromoUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "初回入金50%ボーナス",
+  title: "入金ボーナス分析",
   description:
-    "ババオプションの入金ボーナス（初回50%）の概要、対象条件、出金ルールの注意点を日本語で整理。2026年2月6日開始。",
+    "ババオプションの初回50%入金ボーナスの期間、適用条件、確認手順を公式情報ベースで整理。",
   alternates: {
     canonical: "/bonus",
   },
   openGraph: {
-    title: "初回入金50%ボーナス",
+    title: "入金ボーナス分析",
     description:
-      "ババオプションの入金ボーナス（初回50%）の概要、対象条件、出金ルールの注意点を日本語で整理。2026年2月6日開始。",
+      "ババオプションの初回50%入金ボーナスの期間、適用条件、確認手順を公式情報ベースで整理。",
     url: "/bonus",
-  },
-  twitter: {
-    title: "初回入金50%ボーナス",
-    description:
-      "ババオプションの入金ボーナス（初回50%）の概要、対象条件、出金ルールの注意点を日本語で整理。2026年2月6日開始。",
   },
 };
 
+const highlights = [
+  "初回入金に対して50%ボーナス",
+  "2回目以降は20%ボーナス",
+  "総額上限は1,500,000円（公式記載）",
+  "期間: 2026年2月6日 - 2026年2月28日（公式ページ確認時点）",
+];
+
+const cautions = [
+  "付与条件や対象通貨は変更される場合があります。",
+  "ボーナスの出金可否や消滅条件は必ず公式規約で確認してください。",
+  "本ページの数値は最終確認日ベースで、リアルタイム更新ではありません。",
+];
+
 export default function BonusPage() {
   const officialUrl = getOfficialUrl();
+  const promoUrl = getPromoUrl();
 
   return (
     <div className="space-y-12 pt-10">
       <section className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
-        <div className="bg-hero-panel" aria-hidden="true" />
-        <div className="relative grid gap-8 px-4 pb-8 pt-10 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="space-y-4">
-          <p className="text-sm font-semibold text-teal-700">キャンペーン解説</p>
-          <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
-            2026年2月6日から初回入金50%ボーナス
-          </h1>
-          <p className="text-sm text-black/70">
-            現在案内されている主なキャンペーンは初回入金50%の入金ボーナスです。ここでは2026年2月6日開始予定の内容に触れつつ、
-            条件や注意点をわかりやすく整理しました。
-          </p>
-          <a
-            className="btn-primary"
-            href={officialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            公式で条件を確認する
-          </a>
-          </div>
-          <MediaSlot
-            src="/partner/bonus-banner.webp"
-            alt="ババオプション ボーナス案内イメージ"
-            width={920}
-            height={700}
-            objectPosition="right center"
-            label="/public/partner/bonus-banner.webp"
+        <div className="relative overflow-hidden rounded-3xl">
+          <Image
+            src="/media/bonus-hero.jpg"
+            alt="初回入金50%ボーナスの公式イメージ"
+            width={1280}
+            height={720}
+            className="h-full w-full object-cover"
+            priority
           />
         </div>
       </section>
 
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
-        <h2 className="section-title">注意しておきたい点</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
-          <div className="card">
-            <h3 className="font-display text-lg text-black">ボーナス自体は出金不可</h3>
-            <p className="mt-2 text-sm text-black/70">
-              ボーナスは取引に使うための資金として扱われる場合があります。
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="font-display text-lg text-black">利益は出金可能な場合</h3>
-            <p className="mt-2 text-sm text-black/70">
-              ボーナスで得た利益は出金できるとされることがありますが、条件確認が必要です。
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="font-display text-lg text-black">出金時に条件が適用</h3>
-            <p className="mt-2 text-sm text-black/70">
-              出金時にボーナス比率が差し引かれる、条件未達で消滅する場合があります。
-            </p>
-          </div>
+      <section className="section rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
+        <p className="text-sm font-semibold text-teal-700">公式プロモーション分析</p>
+        <h1 className="section-title mt-1">初回50%入金ボーナスの確認ポイント</h1>
+        <div className="mt-6 grid gap-3 md:grid-cols-2">
+          {highlights.map((item) => (
+            <div key={item} className="card p-4">
+              <p className="text-sm text-black/75">{item}</p>
+            </div>
+          ))}
         </div>
-        <p className="mt-4 text-xs text-black/60">
-          ※キャンペーンの有無や適用条件は変更される場合があります。2026年2月6日開始予定の内容も公式で必ずご確認ください。
-        </p>
-      </section>
-
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
-        <div className="card border-amber-200 bg-amber-50/70">
-          <h2 className="font-display text-xl text-black">最新条件は公式で確認</h2>
-          <p className="mt-2 text-sm text-black/70">
-            ボーナスの有無や適用条件は頻繁に更新される可能性があります。
-          </p>
-          <a
-            className="btn-secondary mt-4"
-            href={officialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            公式で詳細を見る
+        <div className="mt-5 flex flex-wrap gap-3">
+          <a className="btn-primary" href={promoUrl} target="_blank" rel="noopener noreferrer">
+            公式プロモーションページ
+          </a>
+          <a className="btn-secondary" href={officialUrl} target="_blank" rel="noopener noreferrer">
+            公式サイトトップ
           </a>
         </div>
+        <p className="mt-4 text-xs text-black/60">最終確認日: 2026年2月9日 / 出典: babaoption.com</p>
       </section>
 
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
-        <div className="grid gap-6 md:grid-cols-[0.95fr_1.05fr]">
-          <div className="card overflow-hidden p-0">
+      <section className="section rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="overflow-hidden rounded-2xl border border-black/10">
             <Image
-              src="/partner/ui-payments.webp"
-              alt="入出金イメージ"
-              width={1152}
-              height={864}
-              className="h-56 w-full object-cover"
+              src="/media/case-bonus-cards.jpg"
+              alt="ボーナス条件カードの画面"
+              width={1280}
+              height={720}
+              className="h-full w-full object-cover"
             />
           </div>
           <div className="space-y-3">
-            <p className="text-sm font-semibold text-teal-700">入出金の雰囲気</p>
-            <h2 className="section-title">決済まわりも見ておくと安心</h2>
-            <p className="text-sm text-black/70">
-              入出金まわりは実際に使ってみないと分からない点があるので、公式の案内も合わせてチェックしておくと安心です。
-            </p>
+            <p className="text-sm font-semibold text-teal-700">注意事項</p>
+            <h2 className="section-title">確認漏れを防ぐチェック</h2>
+            <ul className="space-y-2 text-sm text-black/70">
+              {cautions.map((item) => (
+                <li key={item}>・{item}</li>
+              ))}
+            </ul>
+            <Link className="text-sm font-semibold text-teal-700" href="/risk">
+              リスク/免責を確認 →
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
-        <div className="grid gap-6 md:grid-cols-[1.05fr_0.95fr]">
-          <div className="space-y-3">
-            <p className="text-sm font-semibold text-teal-700">プロモーション画面</p>
-            <h2 className="section-title">ボーナス関連の見え方</h2>
-            <p className="text-sm text-black/70">
-              実際の表示は時期や地域で変わる可能性があります。最新の表示は公式でご確認ください。
-            </p>
-          </div>
-          <div className="card overflow-hidden p-0">
-            <Image
-              src="/partner/ui-bonus.webp"
-              alt="ボーナス画面イメージ"
-              width={1280}
-              height={720}
-              className="h-56 w-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
-        <div className="grid gap-6 md:grid-cols-[0.95fr_1.05fr]">
-          <div className="card overflow-hidden p-0">
-            <Image
-              src="/partner/ui-bonus-table.webp"
-              alt="ボーナス条件の表イメージ"
-              width={1280}
-              height={720}
-              className="h-56 w-full object-cover"
-            />
-          </div>
-          <div className="space-y-3">
-            <p className="text-sm font-semibold text-teal-700">条件の早見</p>
-            <h2 className="section-title">数値は公式で必ず確認</h2>
-            <p className="text-sm text-black/70">
-              表に出ている数値は変更される場合があります。最新の条件は公式ページでご確認ください。
-            </p>
-          </div>
+      <section className="section rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
+        <div className="overflow-hidden rounded-2xl border border-black/10">
+          <Image
+            src="/media/case-bonus-table.jpg"
+            alt="ボーナス通貨別テーブルの画面"
+            width={1280}
+            height={720}
+            className="h-full w-full object-cover"
+          />
         </div>
       </section>
 
@@ -175,10 +117,10 @@ export default function BonusPage() {
 
       <RelatedLinks
         items={[
-          { label: "はじめ方", href: "/start" },
-          { label: "プラットフォーム", href: "/platform" },
+          { label: "戦略一覧", href: "/strategies" },
+          { label: "口座開設", href: "/start" },
           { label: "FAQ", href: "/faq" },
-          { label: "リスク/免責", href: "/risk" },
+          { label: "運営方針", href: "/about" },
         ]}
       />
 

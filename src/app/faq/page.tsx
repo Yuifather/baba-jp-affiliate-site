@@ -8,7 +8,7 @@ import { getLastUpdatedLabel } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "ババオプションの使い方、デモ口座、最低取引額、入金ボーナス、リスクに関するFAQを日本語で整理。",
+    "ババオプション運用時のFAQ。口座開設、出金、評判確認、ハイローオプション比較の視点を整理。",
   keywords: [
     "海外バイナリーオプション業者",
     "ハイローオプション",
@@ -23,66 +23,41 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FAQ",
     description:
-      "ババオプションの使い方、デモ口座、最低取引額、入金ボーナス、リスクに関するFAQを日本語で整理。",
+      "ババオプション運用時のFAQ。口座開設、出金、評判確認、ハイローオプション比較の視点を整理。",
     url: "/faq",
-  },
-  twitter: {
-    title: "FAQ",
-    description:
-      "ババオプションの使い方、デモ口座、最低取引額、入金ボーナス、リスクに関するFAQを日本語で整理。",
   },
 };
 
 const faqItems = [
   {
-    question: "当サイトは公式サイトですか？",
+    question: "海外バイナリーオプション業者を比較する時の優先項目は？",
     answer:
-      "当サイトは体験メモを含むガイドサイトです。最新の条件や規約は必ず公式でご確認ください。",
+      "口座開設手順、出金条件、サポート窓口、取引画面の操作性を同じ順序で比較してください。",
   },
   {
-    question: "デモ口座の利用は可能ですか？",
+    question: "ハイローオプションと比較する際の注意点は？",
     answer:
-      "公式記載では$10,000のデモが用意されています。内容は変更される可能性があります。",
+      "判定時間、取扱銘柄、取引単位、チャートUIを同一条件で並べて比較すると判断しやすくなります。",
   },
   {
-    question: "口座開設に必要なものは？",
+    question: "バイナリーオプション おすすめ情報はどこまで信用できますか？",
     answer:
-      "本人確認（KYC）が必要になる場合があります。必要書類や条件は公式でご確認ください。",
+      "評判記事は参考情報として扱い、最終判断は公式条件と自分の検証記録を優先してください。",
   },
   {
-    question: "最低取引額や最低入金額は？",
+    question: "口座開設に必要な準備は？",
     answer:
-      "公式記載では$1から取引できる設計とされています。最新条件は公式でご確認ください。",
+      "メール登録、本人確認書類、利用可能な入出金手段を事前に用意しておくとスムーズです。",
   },
   {
-    question: "ハイローオプションと比べるときのポイントは？",
+    question: "出金は何を確認すべきですか？",
     answer:
-      "海外バイナリーオプション業者を比較するときは、画面の使いやすさ、口座開設手順、出金条件、サポート導線を同じ基準で確認してください。",
+      "最低出金額、手数料、反映時間、条件未達時の扱いを公式ヘルプセンターで確認してください。",
   },
   {
-    question: "「バイナリーオプション おすすめ」検索で何を見れば良いですか？",
+    question: "リスク管理の基本は？",
     answer:
-      "評判だけで決めず、公式の条件、手数料、出金ルール、リスク説明が明確かをあわせて確認するのが安全です。",
-  },
-  {
-    question: "入金ボーナスの出金ルールは？",
-    answer:
-      "ボーナス自体は出金不可とされる場合があります。利益の出金や条件は公式で確認してください。",
-  },
-  {
-    question: "出金方法は？",
-    answer:
-      "出金方法や手数料、反映時間は公式の案内でご確認ください。条件は変更される場合があります。",
-  },
-  {
-    question: "スマホだけで利用できますか？",
-    answer:
-      "Web・アプリ・デスクトップなど複数の利用方法があるとされています。対応状況は公式でご確認ください。",
-  },
-  {
-    question: "リスクや注意点は？",
-    answer:
-      "バイナリーオプション取引には損失の可能性があります。相場が合えば利益が出る可能性はありますが、保証はありません。",
+      "1回の上限損失、連敗停止条件、日次上限を決めて、ルール外取引をしないことです。",
   },
 ];
 
@@ -108,12 +83,8 @@ export default function FaqPage() {
       />
       <section className="space-y-4">
         <p className="text-sm font-semibold text-teal-700">FAQ</p>
-        <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
-          よくある質問
-        </h1>
-        <p className="text-sm text-black/70">
-          初めての方向けに、よくある質問をまとめました。詳細は公式サイトでご確認ください。
-        </p>
+        <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">よくある質問</h1>
+        <p className="text-sm text-black/70">実運用で問い合わせの多い項目を、比較・検証の視点で整理しています。</p>
       </section>
 
       <section>
@@ -124,10 +95,10 @@ export default function FaqPage() {
 
       <RelatedLinks
         items={[
-          { label: "はじめ方", href: "/start" },
+          { label: "戦略一覧", href: "/strategies" },
+          { label: "口座開設", href: "/start" },
           { label: "ボーナス", href: "/bonus" },
-          { label: "リスク/免責", href: "/risk" },
-          { label: "お問い合わせ", href: "/contact" },
+          { label: "リスク", href: "/risk" },
         ]}
       />
 

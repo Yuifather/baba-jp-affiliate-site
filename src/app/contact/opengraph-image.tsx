@@ -7,7 +7,7 @@ export const contentType = ogContentType;
 export default function OpenGraphImage() {
   return renderOgImage({
     title: "お問い合わせ",
-    subtitle: "メールでの連絡先と注意点",
-    eyebrow: "ババオプション使い方ガイド",
+    subtitle: "修正依頼・誤記報告の連絡先",
+    eyebrow: "バイナリー戦略ラボJP",
   });
 }

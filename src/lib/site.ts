@@ -1,32 +1,37 @@
 import { getSiteUrl } from "@/lib/site-url";
 
 export const siteConfig = {
-  name: "ババオプション使い方ガイド",
-  tagline: "バイナリーオプションの始め方メモ",
+  name: "バイナリー戦略ラボJP",
+  tagline: "ババオプション実践ガイド",
   description:
-    "バイナリーオプションの使い方・始め方・口座開設・デモ・入金/出金・リスクを、ババオプション中心に日本語で整理したガイドです。最新条件は公式で確認してください。",
+    "海外バイナリーオプション業者を比較する方向けに、ババオプションの口座開設、出金、戦略、リスク管理を分析的に整理した日本語ガイドです。",
   contactEmail: "jaku4305@gmail.com",
   baseUrl: getSiteUrl(),
-  officialUrl: "https://www.babaoption.com/",
+  officialUrl: "https://www.babaoption.com/ja",
+  promoUrl: "https://www.babaoption.com/ja/promotion/deposit-bonus",
 };
 
 export const navItems = [
-  { label: "はじめ方", href: "/start" },
+  { label: "戦略一覧", href: "/strategies" },
+  { label: "口座開設", href: "/start" },
   { label: "ボーナス", href: "/bonus" },
   { label: "プラットフォーム", href: "/platform" },
   { label: "FAQ", href: "/faq" },
   { label: "リスク", href: "/risk" },
-  { label: "ご案内", href: "/disclosure" },
+  { label: "運営方針", href: "/about" },
 ];
 
 export const footerLinks = [
+  { label: "戦略一覧", href: "/strategies" },
+  { label: "口座開設", href: "/start" },
+  { label: "運営方針", href: "/about" },
   { label: "プライバシー", href: "/privacy" },
   { label: "お問い合わせ", href: "/contact" },
-  { label: "ご案内", href: "/disclosure" },
   { label: "リスク", href: "/risk" },
 ];
 
 export const officialResources = [
+  { label: "公式サイト", href: "https://www.babaoption.com/ja" },
   { label: "X (公式)", href: "https://x.com/babaoption_jp/" },
   { label: "YouTube (公式)", href: "https://www.youtube.com/@babaoption_japan" },
   { label: "ヘルプセンター", href: "https://helpcenter.babaoption.com/hc/ja-jp" },
@@ -39,6 +44,6 @@ export const organizationProfiles = [
   "https://babaoption.blog/",
 ];
 
-export const getOfficialUrl = () => {
-  return siteConfig.officialUrl;
-};
+export const getOfficialUrl = () => siteConfig.officialUrl;
+
+export const getPromoUrl = () => siteConfig.promoUrl;

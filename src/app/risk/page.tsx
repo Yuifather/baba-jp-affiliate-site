@@ -5,67 +5,61 @@ import RelatedLinks from "@/components/RelatedLinks";
 import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "リスクと注意点",
+  title: "リスクと資金管理",
   description:
-    "バイナリーオプション取引のリスク、損失可能性、自己責任の注意点を日本語で整理。",
+    "バイナリーオプション取引の損失リスク、資金管理、禁止すべき行動を分析的に整理。",
   alternates: {
     canonical: "/risk",
   },
   openGraph: {
-    title: "リスクと注意点",
+    title: "リスクと資金管理",
     description:
-      "バイナリーオプション取引のリスク、損失可能性、自己責任の注意点を日本語で整理。",
+      "バイナリーオプション取引の損失リスク、資金管理、禁止すべき行動を分析的に整理。",
     url: "/risk",
-  },
-  twitter: {
-    title: "リスクと注意点",
-    description:
-      "バイナリーオプション取引のリスク、損失可能性、自己責任の注意点を日本語で整理。",
   },
 };
 
 const riskPoints = [
-  "バイナリーオプション取引は価格変動により損失が生じる可能性があります。",
-  "短時間で結果が出る取引は、判断の難易度が高くなる場合があります。",
-  "取引数量や期間の設定によって、損失幅が大きくなる可能性があります。",
-  "利益が出る可能性はありますが、必ず利益が出るわけではありません。",
-  "ご自身の資金状況・経験に合った範囲で利用することが重要です。",
-  "不明点は公式のLegal Documentsやサポートで確認してください。",
+  "短時間判定は値動きノイズの影響が大きく、想定外の損失が出やすい。",
+  "連敗時の追加入金は損失拡大の要因になる。停止基準を先に決める。",
+  "出金条件未確認のまま資金を入れると、資金拘束リスクがある。",
+  "高勝率をうたう情報は、検証条件と統計母数を確認するまで採用しない。",
+  "生活費を取引資金にしない。余裕資金の範囲でのみ実施する。",
+  "本サイトは投資助言ではない。最終判断は自己責任。",
 ];
 
 export default function RiskPage() {
   return (
     <div className="space-y-12 pt-10">
       <section className="space-y-4">
-        <p className="text-sm font-semibold text-teal-700">重要なお知らせ</p>
+        <p className="text-sm font-semibold text-teal-700">リスク管理</p>
         <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
-          リスクと注意点
+          損失前提でルールを設計する
         </h1>
         <p className="text-sm text-black/70">
-          バイナリーオプション取引には損失の可能性があり、自己責任で行う必要があります。
+          利益より先に、損失を固定する設計が必要です。特にバイナリーオプションは判定時間が短いため、
+          ルール外エントリーの影響が大きくなります。
         </p>
       </section>
 
       <section className="section">
         <div className="grid gap-3">
           {riskPoints.map((point) => (
-            <div key={point} className="card">
-              <p className="text-sm text-black/70">{point}</p>
+            <div key={point} className="card p-4">
+              <p className="text-sm text-black/75">{point}</p>
             </div>
           ))}
         </div>
-        <p className="mt-4 text-xs text-black/60">
-          Not investment advice. 本サイトの内容は情報提供であり、投資助言ではありません。
-        </p>
+        <p className="mt-3 text-xs text-black/60">Not investment advice. 本サイトは情報提供のみを目的としています。</p>
       </section>
 
       <AffiliateCta />
 
       <RelatedLinks
         items={[
-          { label: "はじめ方", href: "/start" },
+          { label: "戦略一覧", href: "/strategies" },
+          { label: "口座開設", href: "/start" },
           { label: "FAQ", href: "/faq" },
-          { label: "ご案内", href: "/disclosure" },
           { label: "お問い合わせ", href: "/contact" },
         ]}
       />

@@ -8,12 +8,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
   const routes = [
     "",
+    "/strategies",
+    "/strategies/trend-pullback",
+    "/strategies/range-reversal",
+    "/strategies/breakout-filter",
     "/start",
     "/bonus",
     "/platform",
     "/faq",
-    "/disclosure",
     "/risk",
+    "/about",
     "/privacy",
     "/contact",
   ];

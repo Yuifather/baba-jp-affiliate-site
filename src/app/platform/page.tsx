@@ -1,47 +1,42 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import AffiliateCta from "@/components/AffiliateCta";
-import MediaSlot from "@/components/MediaSlot";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
-import { getOfficialUrl } from "@/lib/site";
 import { getLastUpdatedLabel } from "@/lib/seo";
+import { getOfficialUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "プラットフォーム",
   description:
-    "ババオプションのWeb/アプリ/デスクトップ対応など、バイナリーオプションの取引環境と操作性を日本語で整理。",
+    "ババオプションのWeb、モバイル、デスクトップ環境を比較し、分析向けの使い分けを整理。",
   alternates: {
     canonical: "/platform",
   },
   openGraph: {
     title: "プラットフォーム",
     description:
-      "ババオプションのWeb/アプリ/デスクトップ対応など、バイナリーオプションの取引環境と操作性を日本語で整理。",
+      "ババオプションのWeb、モバイル、デスクトップ環境を比較し、分析向けの使い分けを整理。",
     url: "/platform",
-  },
-  twitter: {
-    title: "プラットフォーム",
-    description:
-      "ババオプションのWeb/アプリ/デスクトップ対応など、バイナリーオプションの取引環境と操作性を日本語で整理。",
   },
 };
 
 const platforms = [
   {
-    title: "Web（ブラウザ）",
-    description: "インストール不要。さっと確認できるのが便利でした。",
-    image: "/partner/ui-web.webp",
+    title: "Web Terminal",
+    note: "インストール不要。分析メモを見ながらすぐ検証できる。",
+    image: "/media/case-web-hero.jpg",
   },
   {
-    title: "モバイルアプリ",
-    description: "移動中でも操作しやすく、触っていて軽快です。",
-    image: "/partner/ui-mobile.webp",
+    title: "Mobile App",
+    note: "外出時でも判定時間の管理と残高確認がしやすい。",
+    image: "/media/case-mobile-hero.jpg",
   },
   {
-    title: "デスクトップ（HTS）",
-    description: "大画面で複数情報を見たい人向け。",
-    image: "/partner/ui-desktop.webp",
+    title: "Desktop / Multi View",
+    note: "複数チャートを同時監視し、エントリー候補を絞り込める。",
+    image: "/media/case-multi-grid.jpg",
   },
 ];
 
@@ -54,71 +49,69 @@ export default function PlatformPage() {
         <div className="bg-hero-panel" aria-hidden="true" />
         <div className="relative grid gap-8 px-4 pb-8 pt-10 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="space-y-4">
-          <p className="text-sm font-semibold text-teal-700">利用環境</p>
-          <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
-            どのデバイスでも迷わない
-          </h1>
-          <p className="text-sm text-black/70">
-            Web取引・スマホアプリ・デスクトップ版の取引画面をまとめました。対応状況は公式でご確認ください。
-          </p>
-          <a
-            className="btn-primary"
-            href={officialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            公式のプラットフォームを見る
-          </a>
+            <p className="text-sm font-semibold text-teal-700">取引環境</p>
+            <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">
+              デバイス別の使い分け
+            </h1>
+            <p className="text-sm text-black/70">
+              同じ戦略でもデバイスごとに確認しやすい情報が変わります。
+              エントリー判断は大画面、監視はモバイル、といった使い分けが有効です。
+            </p>
+            <a className="btn-primary" href={officialUrl} target="_blank" rel="noopener noreferrer">
+              公式プラットフォームを見る
+            </a>
           </div>
-          <MediaSlot
-            src="/partner/platform-banner.webp"
-            alt="ババオプション プラットフォームイメージ"
-            width={920}
-            height={700}
-            objectPosition="right center"
-            label="/public/partner/platform-banner.webp"
-          />
+          <div className="overflow-hidden rounded-3xl border border-black/10 bg-black/5 shadow-sm">
+            <Image
+              src="/media/platform-mix.jpg"
+              alt="複数デバイスのプラットフォーム画面"
+              width={1280}
+              height={720}
+              className="h-full w-full object-cover"
+              priority
+            />
+          </div>
         </div>
       </section>
 
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
-        <h2 className="section-title">代表的な利用シーン</h2>
+      <section className="section">
+        <h2 className="section-title">用途別の見方</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
-          {platforms.map((platform) => (
-            <div key={platform.title} className="card overflow-hidden p-0">
-              <Image
-                src={platform.image}
-                alt={platform.title}
-                width={1152}
-                height={864}
-                className="h-48 w-full object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-display text-lg text-black">{platform.title}</h3>
-                <p className="mt-2 text-sm text-black/70">{platform.description}</p>
+          {platforms.map((item) => (
+            <article key={item.title} className="card overflow-hidden p-0">
+              <Image src={item.image} alt={item.title} width={1280} height={720} className="h-44 w-full object-cover" />
+              <div className="space-y-2 p-4">
+                <h3 className="font-display text-lg text-black">{item.title}</h3>
+                <p className="text-sm text-black/70">{item.note}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
-        <p className="mt-4 text-xs text-black/60">
-          ※対応デバイスや機能は地域・アカウント条件によって異なる場合があります。
-        </p>
       </section>
 
-      <section className="section bg-grid-soft rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
-        <div className="card border-teal-700/20">
-          <h2 className="font-display text-xl text-black">まずは公式で環境をチェック</h2>
-          <p className="mt-2 text-sm text-black/70">
-            ダウンロードリンクや推奨環境は公式サイトが最も正確です。
-          </p>
-          <a
-            className="btn-secondary mt-4"
-            href={officialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            公式サイトへ
-          </a>
+      <section className="section rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="overflow-hidden rounded-2xl border border-black/10">
+            <Image
+              src="/media/case-platform-diagonal.jpg"
+              alt="プラットフォームのUIクローズアップ"
+              width={1280}
+              height={720}
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="space-y-3">
+            <p className="text-sm font-semibold text-teal-700">実務メモ</p>
+            <h2 className="section-title">導入前チェック</h2>
+            <ul className="space-y-2 text-sm text-black/70">
+              <li>・Web版でチャート/注文UIを確認</li>
+              <li>・モバイルで通知と残高表示を確認</li>
+              <li>・必要ならデスクトップで複数監視へ拡張</li>
+            </ul>
+            <Link className="text-sm font-semibold text-teal-700" href="/start">
+              口座開設フローへ →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -126,10 +119,10 @@ export default function PlatformPage() {
 
       <RelatedLinks
         items={[
-          { label: "はじめ方", href: "/start" },
-          { label: "ボーナス", href: "/bonus" },
+          { label: "戦略一覧", href: "/strategies" },
+          { label: "口座開設", href: "/start" },
           { label: "FAQ", href: "/faq" },
-          { label: "リスク/免責", href: "/risk" },
+          { label: "リスク", href: "/risk" },
         ]}
       />
 
