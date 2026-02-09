@@ -4,7 +4,7 @@ import { Noto_Sans_JP, Shippori_Mincho } from "next/font/google";
 import "./globals.css";
 import BrandMark from "@/components/BrandMark";
 import RiskBanner from "@/components/RiskBanner";
-import { footerLinks, navItems, siteConfig } from "@/lib/site";
+import { footerLinks, navItems, officialResources, organizationProfiles, siteConfig } from "@/lib/site";
 import { getSiteUrl } from "@/lib/site-url";
 
 const notoSans = Noto_Sans_JP({
@@ -29,9 +29,14 @@ export const metadata: Metadata = {
   keywords: [
     "ババオプション",
     "バイナリーオプション",
+    "海外バイナリーオプション業者",
+    "ハイローオプション",
+    "バイナリーオプション おすすめ",
     "使い方",
     "始め方",
     "口座開設",
+    "出金",
+    "評判",
     "デモ口座",
     "入金ボーナス",
     "プラットフォーム",
@@ -74,6 +79,7 @@ export default function RootLayout({
         name: siteConfig.name,
         url: siteConfig.baseUrl,
         logo: logoUrl,
+        sameAs: organizationProfiles,
         contactPoint: {
           "@type": "ContactPoint",
           email: siteConfig.contactEmail,
@@ -140,6 +146,22 @@ export default function RootLayout({
                     {link.label}
                   </Link>
                 ))}
+              </div>
+              <div className="space-y-2">
+                <p className="font-semibold text-black">公式関連リンク</p>
+                <div className="flex flex-wrap items-center gap-4">
+                  {officialResources.map((resource) => (
+                    <a
+                      key={resource.href}
+                      href={resource.href}
+                      className="text-black/70 hover:text-black"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {resource.label}
+                    </a>
+                  ))}
+                </div>
               </div>
               <p className="text-xs text-black/50">
                 © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.

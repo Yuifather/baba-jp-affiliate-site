@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import AffiliateCta from "@/components/AffiliateCta";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
-import { siteConfig } from "@/lib/site";
+import { officialResources, siteConfig } from "@/lib/site";
 import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "ご案内",
   description:
     "運営者情報、編集方針、更新方針、免責などをまとめたご案内ページです。",
+  keywords: ["評判", "口座開設", "出金", "バイナリーオプション おすすめ"],
   alternates: {
     canonical: "/disclosure",
   },
@@ -73,6 +74,28 @@ export default function DisclosurePage() {
           <p className="text-sm text-black/70">
             バイナリーオプション取引には損失の可能性があります。余裕資金で、自己責任でご利用ください。
           </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="card space-y-4">
+          <h2 className="font-display text-xl text-black">公式関連リンク</h2>
+          <p className="text-sm text-black/70">
+            条件更新やサポート情報、最新投稿を確認する場合は、以下の公式チャネルを参照してください。
+          </p>
+          <div className="flex flex-wrap gap-3 text-sm">
+            {officialResources.map((resource) => (
+              <a
+                key={resource.href}
+                href={resource.href}
+                className="rounded-full border border-black/10 bg-white/70 px-3 py-1 text-black/70 hover:text-black"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {resource.label}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

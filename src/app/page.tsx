@@ -6,13 +6,21 @@ import FaqAccordion from "@/components/FaqAccordion";
 import MediaSlot from "@/components/MediaSlot";
 import PageMeta from "@/components/PageMeta";
 import RelatedLinks from "@/components/RelatedLinks";
-import { getOfficialUrl } from "@/lib/site";
+import { getOfficialUrl, officialResources } from "@/lib/site";
 import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "ババオプションの使い方ガイド",
   description:
     "ババオプション（バイナリーオプション）の使い方・始め方・口座開設・デモ・入金/出金・リスクを日本語で整理。公式条件の確認から始められます。",
+  keywords: [
+    "海外バイナリーオプション業者",
+    "ハイローオプション",
+    "バイナリーオプション おすすめ",
+    "口座開設",
+    "出金",
+    "評判",
+  ],
   alternates: {
     canonical: "/",
   },
@@ -233,6 +241,28 @@ export default function Home() {
       </section>
 
       <section className="section">
+        <div className="card space-y-4">
+          <p className="text-sm font-semibold text-teal-700">検索キーワードの確認ポイント</p>
+          <h2 className="section-title">比較前に押さえたい基準</h2>
+          <p className="text-sm text-black/70">
+            「海外バイナリーオプション業者」や「バイナリーオプション おすすめ」で探す場合は、
+            使いやすさだけでなく、口座開設の手順、出金条件、評判の確認方法をセットで見ると判断しやすくなります。
+          </p>
+          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-2xl border border-black/10 bg-white/80 p-4 text-sm text-black/70">
+              ハイローオプションなど他サービスと比較するときは、取引画面の見やすさと注文手順を先に確認。
+            </div>
+            <div className="rounded-2xl border border-black/10 bg-white/80 p-4 text-sm text-black/70">
+              口座開設は必要書類と本人確認の流れを事前確認。完了までの目安もチェック。
+            </div>
+            <div className="rounded-2xl border border-black/10 bg-white/80 p-4 text-sm text-black/70">
+              出金は手数料・反映時間・条件未達時の扱いを公式ヘルプで確認。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="card">
           <div className="flex flex-wrap items-end justify-between gap-2">
             <div>
@@ -276,6 +306,29 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="card">
+          <p className="text-sm font-semibold text-teal-700">公式情報リンク</p>
+          <h2 className="section-title">最新情報の確認先</h2>
+          <p className="text-sm text-black/70">
+            評判や更新情報を追う場合は、公式X・YouTube・ヘルプセンター・公式ブログも合わせて確認してください。
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3 text-sm">
+            {officialResources.map((resource) => (
+              <a
+                key={resource.href}
+                href={resource.href}
+                className="rounded-full border border-black/10 bg-white/70 px-3 py-1 text-black/70 hover:text-black"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {resource.label}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

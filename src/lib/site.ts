@@ -26,6 +26,19 @@ export const footerLinks = [
   { label: "リスク", href: "/risk" },
 ];
 
+export const officialResources = [
+  { label: "X (公式)", href: "https://x.com/babaoption_jp/" },
+  { label: "YouTube (公式)", href: "https://www.youtube.com/@babaoption_japan" },
+  { label: "ヘルプセンター", href: "https://helpcenter.babaoption.com/hc/ja-jp" },
+  { label: "公式ブログ", href: "https://babaoption.blog/" },
+];
+
+export const organizationProfiles = [
+  "https://x.com/babaoption_jp/",
+  "https://www.youtube.com/@babaoption_japan",
+  "https://babaoption.blog/",
+];
+
 export const getOfficialUrl = () => {
   return siteConfig.officialUrl;
 };
