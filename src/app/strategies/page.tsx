@@ -8,14 +8,26 @@ import { getLastUpdatedLabel } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "戦略一覧",
   description:
-    "ババオプション実践向けに、トレンド押し目・レンジ逆張り・ブレイク確認の3戦略を整理。",
+    "バイナリーオプションの短期取引向けに、逆張り・ライントレード・テクニカル分析の実践手順を整理。",
+  keywords: [
+    "バイナリーオプション",
+    "勝てる手法",
+    "短期取引",
+    "逆張り",
+    "テクニカル分析",
+    "ライントレード",
+    "インジケーター",
+    "トレンド転換",
+    "デモトレード",
+    "バイナリーオプション ツール",
+  ],
   alternates: {
     canonical: "/strategies",
   },
   openGraph: {
     title: "戦略一覧",
     description:
-      "ババオプション実践向けに、トレンド押し目・レンジ逆張り・ブレイク確認の3戦略を整理。",
+      "バイナリーオプションの短期取引向けに、逆張り・ライントレード・テクニカル分析の実践手順を整理。",
     url: "/strategies",
   },
 };
@@ -48,7 +60,8 @@ export default function StrategiesPage() {
         <p className="text-sm font-semibold text-teal-700">Trading Methods</p>
         <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">戦略一覧</h1>
         <p className="text-sm text-black/70">
-          すべて検証前提の戦略です。期待値は相場状況に依存するため、単独での再現性を保証するものではありません。
+          バイナリーオプションの短期取引で使う主要手法を整理しています。勝てる手法という単語だけで判断せず、
+          テクニカル分析とデモトレードで再現性を確認してから運用してください。
         </p>
       </section>
 
@@ -65,6 +78,26 @@ export default function StrategiesPage() {
             </div>
           </article>
         ))}
+      </section>
+
+      <section className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm">
+        <div className="space-y-3">
+          <p className="text-sm font-semibold text-teal-700">分析フロー</p>
+          <h2 className="font-display text-2xl text-black">テクニカル分析とツールの使い方</h2>
+          <p className="text-sm text-black/70">
+            ライントレードで価格帯を定義し、インジケーターで過熱を確認、トレンド転換サインが出た場面のみ検討する流れです。
+            バイナリーオプション ツールは補助として使い、最終判断はチャートの根拠で行います。
+          </p>
+        </div>
+        <div className="mt-5 overflow-hidden rounded-3xl border border-black/10 bg-black/5">
+          <Image
+            src="/media/analysis-tool-flow.svg"
+            alt="テクニカル分析からエントリー判断までのフロー図"
+            width={1600}
+            height={900}
+            className="h-full w-full object-cover"
+          />
+        </div>
       </section>
 
       <RelatedLinks

@@ -6,7 +6,15 @@ import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "ブレイク確認戦略",
-  description: "ブレイク後の確定足を使ってフェイクを減らす戦略。",
+  description: "ライントレードでブレイクを判定し、テクニカル分析でダマシを減らす短期取引戦略。",
+  keywords: [
+    "バイナリーオプション",
+    "短期取引",
+    "ライントレード",
+    "テクニカル分析",
+    "インジケーター",
+    "勝てる手法",
+  ],
   alternates: {
     canonical: "/strategies/breakout-filter",
   },
@@ -31,12 +39,16 @@ export default function BreakoutFilterPage() {
         <p className="text-sm font-semibold text-teal-700">Strategy 03</p>
         <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">ブレイク確認戦略</h1>
         <p className="text-sm text-black/70">ダマシを減らすため、抜けた事実を確認してから入る戦略です。</p>
+        <p className="text-sm text-black/70">
+          勝てる手法として紹介されることが多いですが、実際はライン突破後の確定足確認と、
+          インジケーターでの過熱チェックを徹底できるかで結果が変わります。
+        </p>
       </section>
 
       <section className="overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
         <Image
           src="/media/strategy-breakout-filter.svg"
-          alt="ブレイク確認戦略のチャート例"
+          alt="ブレイク確認戦略の判断フロー図"
           width={1280}
           height={720}
           className="h-full w-full object-cover"

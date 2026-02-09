@@ -1,0 +1,45 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF6FF"/>
+      <stop offset="1" stop-color="#DCEBFF"/>
+    </linearGradient>
+    <linearGradient id="center" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <circle cx="800" cy="450" r="190" fill="url(#center)"/>
+  <text x="690" y="430" fill="#FFFFFF" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="44" font-weight="700">検索テーマ</text>
+  <text x="680" y="485" fill="#DDF0FF" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="36" font-weight="700">2025-2026</text>
+
+  <rect x="120" y="120" width="430" height="270" rx="24" fill="#FFFFFF" stroke="#B7D1F8"/>
+  <text x="150" y="175" fill="#0F2A56" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="34" font-weight="700">比較系</text>
+  <text x="150" y="220" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">バイナリーオプション</text>
+  <text x="150" y="252" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">バイナリー / ハイロー</text>
+  <text x="150" y="284" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">海外バイナリー</text>
+  <text x="150" y="316" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">海外バイナリーおすすめ</text>
+  <text x="150" y="348" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">評判 / 口座開設 / 出金</text>
+
+  <rect x="1048" y="120" width="430" height="270" rx="24" fill="#FFFFFF" stroke="#B7D1F8"/>
+  <text x="1078" y="175" fill="#0F2A56" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="34" font-weight="700">手法系</text>
+  <text x="1078" y="220" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">勝てる手法（検証前提）</text>
+  <text x="1078" y="252" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">短期取引</text>
+  <text x="1078" y="284" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">逆張り</text>
+  <text x="1078" y="316" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">ライントレード</text>
+  <text x="1078" y="348" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">トレンド転換</text>
+
+  <rect x="350" y="560" width="900" height="250" rx="24" fill="#FFFFFF" stroke="#B7D1F8"/>
+  <text x="380" y="620" fill="#0F2A56" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="34" font-weight="700">分析・検証系</text>
+  <text x="380" y="666" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">バイナリーオプション ツール / インジケーター</text>
+  <text x="380" y="698" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">テクニカル分析 / ペイアウト率</text>
+  <text x="380" y="730" fill="#274676" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="24">デモトレードで再現性確認</text>
+  <text x="380" y="770" fill="#4B638F" font-family="'Segoe UI', 'Yu Gothic', sans-serif" font-size="22">※ 利益保証なし。必ずリスク管理をセットで運用。</text>
+
+  <path d="M550 255L650 345" stroke="#4F7ED1" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1050 255L950 345" stroke="#4F7ED1" stroke-width="5" stroke-linecap="round"/>
+  <path d="M800 640L800 530" stroke="#4F7ED1" stroke-width="5" stroke-linecap="round"/>
+</svg>

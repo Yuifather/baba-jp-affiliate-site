@@ -6,7 +6,15 @@ import { getLastUpdatedLabel } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "レンジ逆張り戦略",
-  description: "レンジ相場の上限/下限で反発を確認して入る手順。",
+  description: "レンジ相場で逆張りを行う際の短期取引手順。ペイアウト率と根拠を同時に確認する方法。",
+  keywords: [
+    "バイナリーオプション",
+    "逆張り",
+    "短期取引",
+    "ペイアウト率",
+    "ライントレード",
+    "デモトレード",
+  ],
   alternates: {
     canonical: "/strategies/range-reversal",
   },
@@ -31,12 +39,16 @@ export default function RangeReversalPage() {
         <p className="text-sm font-semibold text-teal-700">Strategy 02</p>
         <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">レンジ逆張り戦略</h1>
         <p className="text-sm text-black/70">レンジ上限と下限での反発を使う、再現性重視の短期戦略です。</p>
+        <p className="text-sm text-black/70">
+          逆張りはエントリー根拠が弱いと連敗しやすいため、ライントレードで上下限を明確化し、
+          ペイアウト率だけでなく反発確認の有無を優先してください。まずはデモトレードで検証するのが前提です。
+        </p>
       </section>
 
       <section className="overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
         <Image
           src="/media/strategy-range-reversal.svg"
-          alt="レンジ逆張りで使う判定時間の画面"
+          alt="レンジ逆張り戦略の判断フロー図"
           width={1280}
           height={720}
           className="h-full w-full object-cover"

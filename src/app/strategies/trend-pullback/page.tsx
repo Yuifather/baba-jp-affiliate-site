@@ -8,7 +8,15 @@ import { getOfficialUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "トレンド押し目戦略",
   description:
-    "トレンド方向に押し目/戻りを待ってエントリーする実践手順。",
+    "トレンド転換を見極め、ライントレードとインジケーターで押し目を待つ短期取引の実践手順。",
+  keywords: [
+    "バイナリーオプション",
+    "短期取引",
+    "ライントレード",
+    "インジケーター",
+    "トレンド転換",
+    "デモトレード",
+  ],
   alternates: {
     canonical: "/strategies/trend-pullback",
   },
@@ -35,12 +43,16 @@ export default function TrendPullbackPage() {
         <p className="text-sm font-semibold text-teal-700">Strategy 01</p>
         <h1 className="font-display text-3xl font-semibold text-black sm:text-4xl">トレンド押し目戦略</h1>
         <p className="text-sm text-black/70">トレンド方向の優位性を使い、押し目/戻りで入る最も基本的な手法です。</p>
+        <p className="text-sm text-black/70">
+          テクニカル分析では、先にラインを引いて押し目候補を可視化し、インジケーターは過熱判定の補助として使います。
+          トレンド転換の初動と勘違いしないために、デモトレードで同条件を複数回検証してください。
+        </p>
       </section>
 
       <section className="overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
         <Image
           src="/media/strategy-trend-pullback.svg"
-          alt="トレンド押し目戦略のチャート例"
+          alt="トレンド押し目戦略の判断フロー図"
           width={1280}
           height={720}
           className="h-full w-full object-cover"

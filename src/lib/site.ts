@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "バイナリー戦略ラボJP",
   tagline: "ババオプション実践ガイド",
   description:
-    "海外バイナリーオプション業者を比較する方向けに、ババオプションの口座開設、出金、戦略、リスク管理を分析的に整理した日本語ガイドです。",
+    "海外バイナリーオプション業者の比較、ハイロー検討、短期取引の戦略検証に向けて、ババオプションの口座開設・出金・テクニカル分析を整理した日本語ガイドです。",
   contactEmail: "jaku4305@gmail.com",
   baseUrl: getSiteUrl(),
   officialUrl: "https://www.babaoption.com/ja",

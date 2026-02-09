@@ -10,8 +10,23 @@ import { getOfficialUrl, officialResources } from "@/lib/site";
 export const metadata: Metadata = {
   title: "ホーム",
   description:
-    "ババオプションの実践向けガイド。海外バイナリーオプション業者の比較観点、口座開設、出金、戦略、評判確認の手順を分析的に整理。",
+    "バイナリーオプション、ハイロー、海外バイナリーおすすめの比較観点と、短期取引・逆張り・テクニカル分析を実践向けに整理。",
   keywords: [
+    "バイナリーオプション",
+    "バイナリー",
+    "ハイロー",
+    "海外バイナリー",
+    "海外バイナリーおすすめ",
+    "バイナリーオプション ツール",
+    "勝てる手法",
+    "短期取引",
+    "逆張り",
+    "ペイアウト率",
+    "テクニカル分析",
+    "ライントレード",
+    "インジケーター",
+    "トレンド転換",
+    "デモトレード",
     "海外バイナリーオプション業者",
     "ハイローオプション",
     "バイナリーオプション おすすめ",
@@ -25,13 +40,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "バイナリー戦略ラボJP",
     description:
-      "ババオプションの実践向けガイド。海外バイナリーオプション業者の比較観点、口座開設、出金、戦略、評判確認の手順を分析的に整理。",
+      "バイナリーオプション、ハイロー、海外バイナリーおすすめの比較観点と、短期取引・逆張り・テクニカル分析を実践向けに整理。",
     url: "/",
   },
   twitter: {
     title: "バイナリー戦略ラボJP",
     description:
-      "ババオプションの実践向けガイド。海外バイナリーオプション業者の比較観点、口座開設、出金、戦略、評判確認の手順を分析的に整理。",
+      "バイナリーオプション、ハイロー、海外バイナリーおすすめの比較観点と、短期取引・逆張り・テクニカル分析を実践向けに整理。",
   },
 };
 
@@ -67,6 +82,22 @@ const facts = [
   "デモ口座は$10,000相当の検証枠",
   "取扱銘柄は70種類以上（時期により変動）",
   "判定時間は最短5秒の設定が可能",
+  "ペイアウト率は銘柄・判定時間で変動し固定ではない",
+];
+
+const keywordThemeBlocks = [
+  {
+    title: "比較系キーワード",
+    text: "バイナリーオプション / バイナリー / ハイロー / 海外バイナリー / 海外バイナリーおすすめ",
+  },
+  {
+    title: "手法系キーワード",
+    text: "勝てる手法 / 短期取引 / 逆張り / トレンド転換 / ライントレード",
+  },
+  {
+    title: "分析・検証キーワード",
+    text: "バイナリーオプション ツール / テクニカル分析 / インジケーター / ペイアウト率 / デモトレード",
+  },
 ];
 
 export default function Home() {
@@ -167,6 +198,35 @@ export default function Home() {
               <p className="text-sm text-black/75">{point}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="section rounded-3xl border border-black/10 bg-white/70 px-4 py-10 shadow-sm sm:px-8">
+        <p className="text-sm font-semibold text-teal-700">検索テーマ 2025-2026</p>
+        <h2 className="section-title mt-1">主要キーワードと学習順序</h2>
+        <p className="mt-3 text-sm text-black/70">
+          「勝てる手法」という検索語は多いですが、実務ではテクニカル分析・ライントレード・インジケーターを検証し、
+          デモトレードで再現性を確認してから短期取引へ進む流れが有効です。
+        </p>
+        <p className="mt-2 text-sm text-black/70">
+          逆張りやトレンド転換の判断は、ペイアウト率だけでなくエントリー根拠と損失許容のセットで管理してください。
+        </p>
+        <div className="mt-6 grid gap-3 md:grid-cols-3">
+          {keywordThemeBlocks.map((block) => (
+            <article key={block.title} className="card p-4">
+              <h3 className="font-display text-base text-black">{block.title}</h3>
+              <p className="mt-2 text-sm text-black/70">{block.text}</p>
+            </article>
+          ))}
+        </div>
+        <div className="mt-6 overflow-hidden rounded-3xl border border-black/10 bg-black/5">
+          <Image
+            src="/media/keyword-theme-map.svg"
+            alt="バイナリーオプション関連の主要検索キーワードを比較系・手法系・分析系に分けたマップ"
+            width={1600}
+            height={900}
+            className="h-full w-full object-cover"
+          />
         </div>
       </section>
 
