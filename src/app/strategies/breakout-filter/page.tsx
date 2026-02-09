@@ -65,8 +65,8 @@ export default function BreakoutFilterPage() {
 
       <section className="overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
         <Image
-          src="/media/case-multi-grid.jpg"
-          alt="ブレイク候補を複数監視している画面"
+          src="/media/strategy-breakout-monitor.svg"
+          alt="ブレイク確認の監視イメージ"
           width={1280}
           height={720}
           className="h-full w-full object-cover"

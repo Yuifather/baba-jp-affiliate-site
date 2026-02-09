@@ -65,8 +65,8 @@ export default function RangeReversalPage() {
 
       <section className="overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
         <Image
-          src="/media/case-multi-grid.jpg"
-          alt="複数銘柄のレンジ監視画面"
+          src="/media/strategy-range-monitor.svg"
+          alt="複数銘柄のレンジ監視イメージ"
           width={1280}
           height={720}
           className="h-full w-full object-cover"

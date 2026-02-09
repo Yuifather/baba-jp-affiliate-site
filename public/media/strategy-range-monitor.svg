@@ -1,0 +1,55 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1730"/>
+      <stop offset="1" stop-color="#1A2F52"/>
+    </linearGradient>
+    <linearGradient id="lineA" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#7DD3FC"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="120" y="130" fill="#EAF1FF" font-family="'Segoe UI', Arial, sans-serif" font-size="54" font-weight="700">Range Monitor Board</text>
+  <text x="120" y="168" fill="#A8BDE4" font-family="'Segoe UI', Arial, sans-serif" font-size="26">Multiple pairs + same rules + same expiry window</text>
+
+  <g>
+    <rect x="90" y="220" width="450" height="280" rx="20" fill="#10213D" stroke="#294A74"/>
+    <rect x="575" y="220" width="450" height="280" rx="20" fill="#10213D" stroke="#294A74"/>
+    <rect x="1060" y="220" width="450" height="280" rx="20" fill="#10213D" stroke="#294A74"/>
+    <rect x="90" y="530" width="450" height="280" rx="20" fill="#10213D" stroke="#294A74"/>
+    <rect x="575" y="530" width="450" height="280" rx="20" fill="#10213D" stroke="#294A74"/>
+    <rect x="1060" y="530" width="450" height="280" rx="20" fill="#10213D" stroke="#294A74"/>
+  </g>
+
+  <g opacity="0.35" stroke="#45638F" stroke-width="1">
+    <path d="M110 300H520"/><path d="M110 380H520"/><path d="M110 460H520"/>
+    <path d="M595 300H1005"/><path d="M595 380H1005"/><path d="M595 460H1005"/>
+    <path d="M1080 300H1490"/><path d="M1080 380H1490"/><path d="M1080 460H1490"/>
+    <path d="M110 610H520"/><path d="M110 690H520"/><path d="M110 770H520"/>
+    <path d="M595 610H1005"/><path d="M595 690H1005"/><path d="M595 770H1005"/>
+    <path d="M1080 610H1490"/><path d="M1080 690H1490"/><path d="M1080 770H1490"/>
+  </g>
+
+  <g stroke="#F59E0B" stroke-width="4" stroke-dasharray="10 10" opacity="0.75">
+    <path d="M115 260H515"/><path d="M115 470H515"/>
+    <path d="M600 260H1000"/><path d="M600 470H1000"/>
+    <path d="M1085 260H1485"/><path d="M1085 470H1485"/>
+    <path d="M115 570H515"/><path d="M115 780H515"/>
+    <path d="M600 570H1000"/><path d="M600 780H1000"/>
+    <path d="M1085 570H1485"/><path d="M1085 780H1485"/>
+  </g>
+
+  <g stroke="url(#lineA)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 430L180 400L240 360L300 390L360 350L430 390L500 360"/>
+    <path d="M605 430L665 380L725 350L785 390L845 420L915 370L985 410"/>
+    <path d="M1090 430L1150 380L1210 360L1270 380L1330 440L1400 410L1470 430"/>
+    <path d="M120 740L180 700L240 660L300 690L360 730L430 690L500 670"/>
+    <path d="M605 740L665 690L725 660L785 700L845 740L915 700L985 680"/>
+    <path d="M1090 740L1150 700L1210 670L1270 710L1330 750L1400 710L1470 690"/>
+  </g>
+
+  <rect x="1220" y="98" width="280" height="84" rx="14" fill="#122646" stroke="#2F5385"/>
+  <text x="1250" y="150" fill="#D7E7FF" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700">Range x 6 pairs</text>
+</svg>
